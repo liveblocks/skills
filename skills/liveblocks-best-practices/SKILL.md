@@ -25,4 +25,18 @@ TODO maybe do bullet points
   structure your app with loading skeletons and spinners.
 - `rendering-error-components`: Use `ErrorBoundary` to structure your app with
   error fallbacks.
+- `handling-unstable-connections`: Implement fallbacks and error messages when
+  users have poor network conditions.
+- `handling-connection-errors`: Handle problems joining rooms because of
+  permissions, authentication, changed room IDs.
+- `handling-hook-and-component-errors`: Handle errors caused by hooks and
+  pre-built components.
+- `handling-full-rooms`: Handle problems caused by joining full rooms.
+- `avoid-hitting-user-limit-in-rooms`: How to avoid rooms filling up with users.
+
+## TODO
+
 - `room-creation`: Always create rooms yourself in production applications.
+- `authenticating-with-id-tokens`: ...
+- `authenticating-with-access-tokens`: ...
+- `adding-users-to-liveblocks`: ...

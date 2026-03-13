@@ -1,5 +1,5 @@
 ---
-title: "Handling unstable connections
+title: "Handling unstable connections"
 ---
 
 # Handling unstable connections

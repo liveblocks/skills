@@ -2,7 +2,7 @@
 title: "Handling hook and component errors"
 ---
 
-# Handling hook and components errors
+# Handling hook and component errors
 
 Pre-built components such as `Thread` and hooks such as `useCreateThread` can
 throw errors.

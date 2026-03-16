@@ -33,11 +33,16 @@ TODO maybe do bullet points
   pre-built components.
 - `handling-full-rooms`: Handle problems caused by joining full rooms.
 - `avoid-hitting-user-limit-in-rooms`: How to avoid rooms filling up with users.
+- `create-rooms-manually`: Always create rooms yourself in production
+  applications, setting permissions, organization, metadata.
+- `customize-thread-components`: Use slots to customize comments inside of
+  threads, and their different parts.
+- `type-liveblocks-correctly`: Always type Liveblocks. Presence, others, user
+  info, storage, metadata, room info, notifications activities, can all be
+  automatically typed.
 
 ## TODO
 
-- `create-rooms-manually`: Always create rooms yourself in production
-  applications.
 - `authenticating-with-id-tokens`: ...
 - `authenticating-with-access-tokens`: ...
 - `adding-users-to-liveblocks`: ...

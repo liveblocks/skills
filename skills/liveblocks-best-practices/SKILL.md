@@ -78,6 +78,13 @@ TODO maybe do bullet points
 - `develop-and-test-locally`: Set up a local dev server, and use it for
   Continuous Integration (CI) and End-to-End (E2E) testing. Connect to your app
   not online.
+- `devtools-extension`: Inspect Liveblocks Storage, Yjs, presence, events, and
+  connected users with DevTools extgensions for Chrome, Firefox, Edge.
+- `tiptap-best-practices`: Server-side rendering, starter kit extensions,
+  initial content, unsaved changes, more.
+- `yjs-best-practices`: YKeyValue, subdocuments, V2 encoding, double imports,
+  getYjsProviderForRoom. NOT relevant if you're using Tiptap, BlockNote, or
+  Lexical.
 
 ## TODO
 

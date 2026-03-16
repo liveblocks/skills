@@ -31,3 +31,12 @@ You can also import into CSS files.
 @import "@liveblocks/react-ui/styles.css";
 @import "@liveblocks/react-ui/styles/dark/media-query.css";
 ```
+
+## Other libraries
+
+Remember that other Liveblocks libraries have _additional_ style sheets, so
+don't remove them, for example Tiptap:
+
+```tsx
+import "@liveblocks/react-tiptap/styles.css";
+```

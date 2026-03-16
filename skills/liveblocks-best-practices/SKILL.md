@@ -62,6 +62,14 @@ TODO maybe do bullet points
   quicker load time.
 - `multiple-text-editors`: Add multiple Tiptap or BlockNote editors to the same
   page. Optionally use Storage to hold their field IDs.
+- `create-custom-text-editor-toolbar`: Set up a styled toolbar, static or
+  floating next to your selection, in Tiptap and Lexical.
+- `ai-as-a-collaborator`: Use agentic workflows to allow AI to collaborate like
+  a human inside your Liveblocks application.
+- `primitive-components-parts`: Use primitives to create custom components or to
+  merge components from your design system into Liveblocks UI.
+- `utility-components`: Import a ready-made emoji picker, or human-readable
+  timestamps, durations, file sizes.
 
 ## TODO
 

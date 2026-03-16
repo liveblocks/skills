@@ -5,7 +5,8 @@ title: "Handling unstable connections"
 # Handling unstable connections
 
 Very short connections dips are ignored by Liveblocks, and your app will
-continue to work correctly. However, when a connectioh drops for 5 seconds,
+continue to work correctly. However, when a connection drops for more than 5
+seconds,
 [`useLostConnectionListener`](https://liveblocks.io/docs/api-reference/liveblocks-react#useLostConnectionListener)
 can be used to render UI, allowing you to tell users about this. It must be used
 inside of

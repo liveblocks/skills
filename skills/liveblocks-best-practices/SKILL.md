@@ -36,7 +36,8 @@ TODO maybe do bullet points
 
 ## TODO
 
-- `room-creation`: Always create rooms yourself in production applications.
+- `create-rooms-manually`: Always create rooms yourself in production
+  applications.
 - `authenticating-with-id-tokens`: ...
 - `authenticating-with-access-tokens`: ...
 - `adding-users-to-liveblocks`: ...

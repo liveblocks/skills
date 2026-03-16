@@ -85,7 +85,7 @@ TODO maybe do bullet points
 - `yjs-best-practices`: YKeyValue, subdocuments, V2 encoding, double imports,
   getYjsProviderForRoom. NOT relevant if you're using Tiptap, BlockNote, or
   Lexical.
-- `create-custom-realtime-multiplaayer`: Use Liveblocks Storage to build fully
+- `create-custom-realtime-multiplayer`: Use Liveblocks Storage to build fully
   custom conflict-resolved multiplayer apps, like Figmaa, Pitch, Spline. Helpful
   for one-off realtime features too, like simple properties in a document.
 
@@ -94,3 +94,6 @@ TODO maybe do bullet points
 - `authenticating-with-id-tokens`: ...
 - `authenticating-with-access-tokens`: ...
 - `adding-users-to-liveblocks`: ...
+- room params
+- handling users that cant auth
+- share menu

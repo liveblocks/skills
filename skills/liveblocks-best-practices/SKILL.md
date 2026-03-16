@@ -47,7 +47,7 @@ TODO maybe do bullet points
 - `edit-component-text-strings`: Override strings in default components, such as
   button values, tooltip text, error text, more. Also helpful for setting other
   languages.
-- `create-custom-comment-composer`: Build your own commenting composer (advanved
+- `create-custom-comment-composer`: Build your own commenting composer (advanced
   use cases only).
 - `smoother-realtime-updates`: Make presence and storage run at a higher frame
   rate, appearing more smooth. using this option, pdates can be received more
@@ -66,10 +66,18 @@ TODO maybe do bullet points
   floating next to your selection, in Tiptap and Lexical.
 - `ai-as-a-collaborator`: Use agentic workflows to allow AI to collaborate like
   a human inside your Liveblocks application.
+- `ai-chats-with-tools-knowledge-components`: Set up and troubleshoot chats with
+  RAG, knowledge, custom components, tool calling, custom models. Different to
+  AI as a collaborator, as it is NOT workflow based.
 - `primitive-components-parts`: Use primitives to create custom components or to
   merge components from your design system into Liveblocks UI.
 - `utility-components`: Import a ready-made emoji picker, or human-readable
   timestamps, durations, file sizes.
+- `trigger-custom-notifications`: Trigger any kind of notification in your
+  inbox, even those unrelated to commenting.
+- `develop-and-test-locally`: Set up a local dev server, and use it for
+  Continuous Integration (CI) and End-to-End (E2E) testing. Connect to your app
+  not online.
 
 ## TODO
 

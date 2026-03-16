@@ -97,3 +97,5 @@ TODO maybe do bullet points
 - room params
 - handling users that cant auth
 - share menu
+- performant others
+- performant storage

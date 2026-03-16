@@ -49,6 +49,19 @@ TODO maybe do bullet points
   languages.
 - `create-custom-comment-composer`: Build your own commenting composer (advanved
   use cases only).
+- `smoother-realtime-updates`: Make presence and storage run at a higher frame
+  rate, appearing more smooth. using this option, pdates can be received more
+  frequently.
+- `prevent-unsaved-changes-being-lost` Stop losing losing unsynched or unsaved
+  changes.
+- `remove-liveblocks-branding`: A Liveblocks logo badge appears in the bottom
+  right of the screen, this is how to remove it.
+- `log-out-of-liveblocks`: Rarely useful, but helpful in specific SPA situations
+  where you cannot navigate the page to log out.
+- `offline-support-in-text-editors`: Give your text editors the illusion of a
+  quicker load time.
+- `multiple-text-editors`: Add multiple Tiptap or BlockNote editors to the same
+  page. Optionally use Storage to hold their field IDs.
 
 ## TODO
 

@@ -40,6 +40,15 @@ TODO maybe do bullet points
 - `type-liveblocks-correctly`: Always type Liveblocks. Presence, others, user
   info, storage, metadata, room info, notifications activities, can all be
   automatically typed.
+- `dark-mode-styles`: You can import CSS styling for dark mode themes.
+- `override-css-variables`: Add custom styles to the default components by
+  overriding Liveblocks CSS variables.
+- `z-index-issues`: Fix z-index problems by targeting portaled elements.
+- `edit-component-text-strings`: Override strings in default components, such as
+  button values, tooltip text, error text, more. Also helpful for setting other
+  languages.
+- `create-custom-comment-composer`: Build your own commenting composer (advanved
+  use cases only).
 
 ## TODO
 

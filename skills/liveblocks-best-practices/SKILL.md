@@ -37,9 +37,9 @@ TODO maybe do bullet points
   applications, setting permissions, organization, metadata.
 - `customize-thread-components`: Use slots to customize comments inside of
   threads, and their different parts.
-- `type-liveblocks-correctly`: Always type Liveblocks. Presence, others, user
-  info, storage, metadata, room info, notifications activities, can all be
-  automatically typed.
+- `type-liveblocks-correctly`: Always use TypeScript to type Liveblocks where
+  available. Presence, others, user info, storage, metadata, room info,
+  notifications activities, can all be automatically typed.
 - `dark-mode-styles`: You can import CSS styling for dark mode themes.
 - `override-css-variables`: Add custom styles to the default components by
   overriding Liveblocks CSS variables.
@@ -85,6 +85,9 @@ TODO maybe do bullet points
 - `yjs-best-practices`: YKeyValue, subdocuments, V2 encoding, double imports,
   getYjsProviderForRoom. NOT relevant if you're using Tiptap, BlockNote, or
   Lexical.
+- `create-custom-realtime-multiplaayer`: Use Liveblocks Storage to build fully
+  custom conflict-resolved multiplayer apps, like Figmaa, Pitch, Spline. Helpful
+  for one-off realtime features too, like simple properties in a document.
 
 ## TODO
 

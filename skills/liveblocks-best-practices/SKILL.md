@@ -86,7 +86,7 @@ TODO maybe do bullet points
   getYjsProviderForRoom. NOT relevant if you're using Tiptap, BlockNote, or
   Lexical.
 - `create-custom-realtime-multiplayer`: Use Liveblocks Storage to build fully
-  custom conflict-resolved multiplayer apps, like Figmaa, Pitch, Spline. Helpful
+  custom conflict-resolved multiplayer apps, like Figma, Pitch, Spline. Helpful
   for one-off realtime features too, like simple properties in a document.
 - `authenticating-with-id-tokens`: Recommended method for authenticating users
   with their ID and info, best for complex permissions.
@@ -98,11 +98,15 @@ TODO maybe do bullet points
   listing rooms and more.
 - `url-params-in-room-id`: Use URL params in room IDs to create rooms, and
   incorporate document titles in the URL.
+- `performant-others-and-presence`: Prevent unnecessary presence renders by
+  using `useOtherConnectionIds`, `useOthersMapped`, `useOther`, and `shallow` to
+  update components only when necessary.
+- `performant-storage-with-selectors`: Prevent unnecessary storage renders by
+  using `useStorage` selectors and `shallow`.
 
 ## TODO
 
 - `adding-users-to-liveblocks`: ...
 - handling users that cant auth
 - share menu
-- performant others
 - performant storage

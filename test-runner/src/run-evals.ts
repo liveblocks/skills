@@ -2,7 +2,12 @@ import { readdirSync, readFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { gradeResponse, runEval, type RunEvalOptions } from "./ai.js";
-import type { EvalRunResult, EvalSingleRun, EvalsFile, ReportData } from "./types.js";
+import type {
+  EvalRunResult,
+  EvalSingleRun,
+  EvalsFile,
+  ReportData,
+} from "./types.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -46,11 +51,11 @@ async function runOneEval(
   evalOptions: RunEvalOptions
 ): Promise<EvalRunResult> {
   const runPromises = Array.from({ length: RUNS_PER_EVAL }, async () => {
-    const { text: response, duration_ms, usage } = await runEval(
-      skillContent,
-      evalCase.prompt,
-      evalOptions
-    );
+    const {
+      text: response,
+      duration_ms,
+      usage,
+    } = await runEval(skillContent, evalCase.prompt, evalOptions);
     const { assertion_results } = await gradeResponse(
       response,
       evalCase.assertions
@@ -70,8 +75,9 @@ async function runOneEval(
   const runs = await Promise.all(runPromises);
 
   const nAssertions = evalCase.assertions.length;
-  const assertionScores = Array.from({ length: nAssertions }, (_, i) =>
-    runs.filter((r) => r.assertion_results[i]?.passed).length
+  const assertionScores = Array.from(
+    { length: nAssertions },
+    (_, i) => runs.filter((r) => r.assertion_results[i]?.passed).length
   );
   const runsPassed = runs.filter((run) =>
     run.assertion_results.every((a) => a.passed)
@@ -85,7 +91,10 @@ async function runOneEval(
   const totalDurationEval = runs.reduce((s, r) => s + r.duration_ms, 0);
   const totalTokens = runs.reduce((s, r) => s + r.usage.totalTokens, 0);
   const totalPrompt = runs.reduce((s, r) => s + r.usage.promptTokens, 0);
-  const totalCompletion = runs.reduce((s, r) => s + r.usage.completionTokens, 0);
+  const totalCompletion = runs.reduce(
+    (s, r) => s + r.usage.completionTokens,
+    0
+  );
 
   const runSummaries: EvalSingleRun[] = runs.map((run) => ({
     response: run.response,
@@ -124,7 +133,9 @@ export async function runAllEvals(skillName: string): Promise<ReportData> {
   const fileListing = listSkillFiles(skillName);
   const evalOptions = { skillName, repoRoot: REPO_ROOT, fileListing };
 
-  console.log(`  Running ${evalsFile.evals.length} evals in parallel (${RUNS_PER_EVAL} runs each)...`);
+  console.log(
+    `  Running ${evalsFile.evals.length} evals in parallel (${RUNS_PER_EVAL} runs each)...`
+  );
   const results = await Promise.all(
     evalsFile.evals.map((evalCase) =>
       runOneEval(evalCase, skillContent, evalOptions)

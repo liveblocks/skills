@@ -9,7 +9,10 @@ const REPO_ROOT = join(__dirname, "..", "..");
  * Extract skill name and description from SKILL.md frontmatter.
  * Used for trigger tests (agents only see name + description when deciding to load a skill).
  */
-export function getSkillMeta(skillName: string): { name: string; description: string } {
+export function getSkillMeta(skillName: string): {
+  name: string;
+  description: string;
+} {
   const path = join(REPO_ROOT, "skills", skillName, "SKILL.md");
   const raw = readFileSync(path, "utf-8");
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
@@ -20,7 +23,11 @@ export function getSkillMeta(skillName: string): { name: string; description: st
   const nameMatch = front.match(/name:\s*["']([^"']*)["']/);
   const name = nameMatch ? nameMatch[1].trim() : skillName;
   // Description can be multiline; value often after description:\n  "
-  const descMatch = front.match(/description:\s*\n?\s*["']([\s\S]*?)["']\s*\n/m);
-  const description = descMatch ? descMatch[1].replace(/\n\s*/g, " ").trim() : "";
+  const descMatch = front.match(
+    /description:\s*\n?\s*["']([\s\S]*?)["']\s*\n/m
+  );
+  const description = descMatch
+    ? descMatch[1].replace(/\n\s*/g, " ").trim()
+    : "";
   return { name, description };
 }

@@ -1,7 +1,7 @@
-import { readFileSync } from "fs";
+import { readdirSync, readFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-import { gradeResponse, runEval } from "./ai.js";
+import { gradeResponse, runEval, type RunEvalOptions } from "./ai.js";
 import type { EvalRunResult, EvalSingleRun, EvalsFile, ReportData } from "./types.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -24,14 +24,32 @@ export function loadSkillContent(skillName: string): string {
   return readFileSync(path, "utf-8");
 }
 
+/** List all files in the skill directory (relative paths). Used so the AI knows what it can read. */
+export function listSkillFiles(skillName: string): string[] {
+  const skillDir = join(REPO_ROOT, "skills", skillName);
+  const out: string[] = [];
+  function walk(dir: string, prefix: string) {
+    const entries = readdirSync(dir, { withFileTypes: true });
+    for (const e of entries) {
+      const rel = prefix ? `${prefix}/${e.name}` : e.name;
+      if (e.isDirectory()) walk(join(dir, e.name), rel);
+      else out.push(rel);
+    }
+  }
+  walk(skillDir, "");
+  return out.sort();
+}
+
 async function runOneEval(
   evalCase: EvalsFile["evals"][number],
-  skillContent: string
+  skillContent: string,
+  evalOptions: RunEvalOptions
 ): Promise<EvalRunResult> {
   const runPromises = Array.from({ length: RUNS_PER_EVAL }, async () => {
     const { text: response, duration_ms, usage } = await runEval(
       skillContent,
-      evalCase.prompt
+      evalCase.prompt,
+      evalOptions
     );
     const { assertion_results } = await gradeResponse(
       response,
@@ -103,10 +121,14 @@ async function runOneEval(
 export async function runAllEvals(skillName: string): Promise<ReportData> {
   const evalsFile = loadEvalsFile(skillName);
   const skillContent = loadSkillContent(skillName);
+  const fileListing = listSkillFiles(skillName);
+  const evalOptions = { skillName, repoRoot: REPO_ROOT, fileListing };
 
   console.log(`  Running ${evalsFile.evals.length} evals in parallel (${RUNS_PER_EVAL} runs each)...`);
   const results = await Promise.all(
-    evalsFile.evals.map((evalCase) => runOneEval(evalCase, skillContent))
+    evalsFile.evals.map((evalCase) =>
+      runOneEval(evalCase, skillContent, evalOptions)
+    )
   );
   results.sort((a, b) => a.id - b.id);
 

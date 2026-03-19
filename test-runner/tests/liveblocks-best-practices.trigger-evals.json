@@ -1,22 +1,321 @@
 [
-  { "query": "How do I use a callback for Liveblocks auth so I can pass custom headers?", "should_trigger": true },
-  { "query": "We need to show user names in comments and cursors — how to add user info?", "should_trigger": true },
-  { "query": "useStorage is re-rendering too much, how to use selectors or shallow?", "should_trigger": true },
-  { "query": "Should we create rooms manually in production with permissions?", "should_trigger": true },
-  { "query": "Handling poor network and connection errors in Liveblocks", "should_trigger": true },
-  { "query": "How to customize comment thread components with slots?", "should_trigger": true },
-  { "query": "ClientSideSuspense and loading states for Liveblocks", "should_trigger": true },
-  { "query": "Send email when someone is mentioned in a comment — webhooks?", "should_trigger": true },
-  { "query": "TypeScript types for presence and storage in Liveblocks", "should_trigger": true },
-  { "query": "Multiple Tiptap editors on one page with Liveblocks", "should_trigger": true },
-  { "query": "How do I fix duplicate Yjs imports in my app?", "should_trigger": false },
-  { "query": "Best way to structure Redis for high write throughput.", "should_trigger": false },
-  { "query": "Write a React hook to debounce input.", "should_trigger": false },
-  { "query": "Configure webpack to bundle a single version of lodash.", "should_trigger": false },
-  { "query": "How to lazy-load React components in a big app?", "should_trigger": false },
-  { "query": "We're using Automerge for CRDT sync. Best practices?", "should_trigger": false },
-  { "query": "Optimize IndexedDB for large documents.", "should_trigger": false },
-  { "query": "Efficient key-value map in TypeScript for in-memory cache.", "should_trigger": false },
-  { "query": "Next.js middleware for auth redirect.", "should_trigger": false },
-  { "query": "Tailwind dark mode with CSS variables.", "should_trigger": false }
+  {
+    "query": "How do I add user names and avatars to comments and cursors?",
+    "should_trigger": true
+  },
+  {
+    "query": "What's the best Redis client for Node.js connection pooling?",
+    "should_trigger": false
+  },
+  {
+    "query": "Set up AI as a collaborator",
+    "should_trigger": true
+  },
+  {
+    "query": "How do I train a custom GPT with my documentation?",
+    "should_trigger": false
+  },
+  {
+    "query": "How do I add tools to my liveblocks ai chat?",
+    "should_trigger": true
+  },
+  {
+    "query": "Integrate LangChain with my Next.js app for chatbots",
+    "should_trigger": false
+  },
+  {
+    "query": "pass custom headers to my auth endpoint",
+    "should_trigger": true
+  },
+  {
+    "query": "How do I pass query params to my REST API from fetch?",
+    "should_trigger": false
+  },
+  {
+    "query": "Authenticate users with Liveblocks",
+    "should_trigger": true
+  },
+  {
+    "query": "JWT vs session cookies for API authentication",
+    "should_trigger": false
+  },
+  {
+    "query": "switch from access tokens to id tokens",
+    "should_trigger": true
+  },
+  {
+    "query": "OAuth2 flow for Google sign-in in React",
+    "should_trigger": false
+  },
+  {
+    "query": "How do i avoid room user limits",
+    "should_trigger": true
+  },
+  {
+    "query": "Rate limit API requests per user in Express",
+    "should_trigger": false
+  },
+  {
+    "query": "how to add workspaces to my collaborative app",
+    "should_trigger": true
+  },
+  {
+    "query": "Multi-tenant database schema design with Row Level Security",
+    "should_trigger": false
+  },
+  {
+    "query": "customize my comment composer",
+    "should_trigger": true
+  },
+  {
+    "query": "Build a custom rich text comment box with Slate.js",
+    "should_trigger": false
+  },
+  {
+    "query": "How do i make my document multiplayer",
+    "should_trigger": true
+  },
+  {
+    "query": "Build a multiplayer game with Socket.io and Redis",
+    "should_trigger": false
+  },
+  {
+    "query": "add a toolbar to my Lexical editor",
+    "should_trigger": true
+  },
+  {
+    "query": "Style the Quill editor toolbar with CSS",
+    "should_trigger": false
+  },
+  {
+    "query": "how to create rooms with public permissions",
+    "should_trigger": true
+  },
+  {
+    "query": "Auto-create DynamoDB tables in production with CDK",
+    "should_trigger": false
+  },
+  {
+    "query": "add UI to my comment threads with slots",
+    "should_trigger": true
+  },
+  { "query": "Customize Disqus embed styling", "should_trigger": false },
+  {
+    "query": "how to do dark mode in liveblocks with prefers-color-scheme",
+    "should_trigger": true
+  },
+  { "query": "Tailwind dark mode with CSS variables", "should_trigger": false },
+  {
+    "query": "how to test liveblocks locally",
+    "should_trigger": true
+  },
+  {
+    "query": "Run E2E tests with Playwright against a staging URL",
+    "should_trigger": false
+  },
+  {
+    "query": "are there liveblocks devtools",
+    "should_trigger": true
+  },
+  {
+    "query": "Debug React component state with React DevTools",
+    "should_trigger": false
+  },
+  {
+    "query": "Override button text in composer",
+    "should_trigger": true
+  },
+  { "query": "i18n for Next.js with next-intl", "should_trigger": false },
+  {
+    "query": "Handle Liveblocks connection errors",
+    "should_trigger": true
+  },
+  {
+    "query": "Handle WebSocket connection drops in a custom client",
+    "should_trigger": false
+  },
+  {
+    "query": "Handle full room error with useErrorListener code 4005 in Liveblocks",
+    "should_trigger": true
+  },
+  {
+    "query": "Handle 503 rate limit errors from my API",
+    "should_trigger": false
+  },
+  {
+    "query": "how to catch a thread creation error in Liveblocks",
+    "should_trigger": true
+  },
+  {
+    "query": "Catch unhandled promise rejections in Node.js",
+    "should_trigger": false
+  },
+  {
+    "query": "how do i handle reconnection in Liveblocks",
+    "should_trigger": true
+  },
+  {
+    "query": "Implement retry logic for failed HTTP requests",
+    "should_trigger": false
+  },
+  {
+    "query": "Log out of Liveblocks in my SPA",
+    "should_trigger": true
+  },
+  {
+    "query": "Clear localStorage on user logout in React",
+    "should_trigger": false
+  },
+  {
+    "query": "Multiple Tiptap editors on one page",
+    "should_trigger": true
+  },
+  {
+    "query": "Enable offline support in Liveblocks tiptap",
+    "should_trigger": true
+  },
+  {
+    "query": "Service worker for offline-first PWA caching",
+    "should_trigger": false
+  },
+  {
+    "query": "Add custom styling to liveblocks components",
+    "should_trigger": true
+  },
+  {
+    "query": "CSS custom properties for theming a design system",
+    "should_trigger": false
+  },
+  {
+    "query": "useStorage re-rendering too much",
+    "should_trigger": true
+  },
+  {
+    "query": "React useMemo to avoid unnecessary recalculations",
+    "should_trigger": false
+  },
+  {
+    "query": "useOthers and presence causing too many renders",
+    "should_trigger": true
+  },
+  {
+    "query": "Optimize React list rendering with virtualization",
+    "should_trigger": false
+  },
+  {
+    "query": "preventUnsavedChanges in liveblocksbefore closing tab",
+    "should_trigger": true
+  },
+  {
+    "query": "beforeunload event to warn user when leaving page with unsaved form",
+    "should_trigger": false
+  },
+  {
+    "query": "build custom comment UI in liveblocks comments",
+    "should_trigger": true
+  },
+  {
+    "query": "Build a headless combobox with Radix primitives",
+    "should_trigger": false
+  },
+  {
+    "query": "Remove Powered by Liveblocks box",
+    "should_trigger": true
+  },
+  {
+    "query": "Remove footer branding from a WordPress theme",
+    "should_trigger": false
+  },
+  {
+    "query": "how to use error fallbacks in liveblocks",
+    "should_trigger": true
+  },
+  {
+    "query": "Global error boundary for React app crash reporting",
+    "should_trigger": false
+  },
+  {
+    "query": "ClientSideSuspense and errorboundary",
+    "should_trigger": true
+  },
+  {
+    "query": "React Suspense for lazy-loaded route components",
+    "should_trigger": false
+  },
+  {
+    "query": "Send email when user is mentioned in comment via Liveblocks",
+    "should_trigger": true
+  },
+  {
+    "query": "Send transactional emails with Resend when user signs up",
+    "should_trigger": false
+  },
+  {
+    "query": "useStorage and useOthers",
+    "should_trigger": true
+  },
+  {
+    "query": "Throttle scroll event handler for performance",
+    "should_trigger": false
+  },
+  {
+    "query": "suspense hooks in liveblocks?",
+    "should_trigger": true
+  },
+  {
+    "query": "React 18 useTransition for non-blocking updates",
+    "should_trigger": false
+  },
+  {
+    "query": "Tiptap with Liveblocks",
+    "should_trigger": true
+  },
+  {
+    "query": "ProseMirror schema design for custom nodes",
+    "should_trigger": false
+  },
+  {
+    "query": "can i send custom notifications in Liveblocks",
+    "should_trigger": true
+  },
+  {
+    "query": "Push notifications with Firebase Cloud Messaging",
+    "should_trigger": false
+  },
+  {
+    "query": "my useStorage types are not working",
+    "should_trigger": true
+  },
+  {
+    "query": "Strict TypeScript types for my REST API responses",
+    "should_trigger": false
+  },
+  {
+    "query": "Use URL params as room ID for documents in Next.js with Liveblocks",
+    "should_trigger": true
+  },
+  {
+    "query": "Next.js dynamic route params for blog slugs",
+    "should_trigger": false
+  },
+  {
+    "query": "Lodash utility functions for array manipulation",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix duplicate Yjs import error in liveblocksd",
+    "should_trigger": true
+  },
+  {
+    "query": "Configure webpack to bundle a single version of lodash",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix z-index issues with Liveblocks tooltips",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix z-index stacking context with CSS isolation",
+    "should_trigger": false
+  }
 ]

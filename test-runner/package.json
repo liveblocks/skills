@@ -4,17 +4,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "eval": "tsx src/index.ts",
-    "eval:evals": "tsx src/index.ts --evals-only",
-    "eval:trigger": "tsx src/index.ts --trigger",
-    "eval:skill": "tsx src/index.ts --"
+    "test:liveblocks": "tsx src/index.ts --skill liveblocks-best-practices",
+    "test:liveblocks:evals": "tsx src/index.ts --evals-only --skill liveblocks-best-practices",
+    "test:liveblocks:trigger": "tsx src/index.ts --trigger --skill liveblocks-best-practices",
+    "test:yjs": "tsx src/index.ts --skill yjs-best-practices",
+    "test:yjs:evals": "tsx src/index.ts --evals-only --skill yjs-best-practices",
+    "test:yjs:trigger": "tsx src/index.ts --trigger --skill yjs-best-practices"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.58",
     "@ai-sdk/openai": "^3.0.41",
     "ai": "^6.0.116",
     "dotenv": "^17.3.1",
-    "open": "^11.0.0"
+    "open": "^11.0.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/node": "^25.5.0",

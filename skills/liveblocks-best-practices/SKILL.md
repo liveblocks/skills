@@ -103,10 +103,15 @@ TODO maybe do bullet points
   update components only when necessary.
 - `performant-storage-with-selectors`: Prevent unnecessary storage renders by
   using `useStorage` selectors and `shallow`.
+- `add-user-information`: Add user information to your application, such as
+  name, avatar, color, and more. Users will no longer be anonymous. Useful for
+  displaying user info in comments, comments mention suggestions, notifications,
+  cursors, avatar stacks.
+- `auth-endpoint-callback`: Use a callback function to authenticate users,
+  instead of passing a string to `authEndpoint`. Useful for passing custom
+  headers to your back end, and for preventing automatic reconnection when the
+  token is invalid.
 
 ## TODO
 
-- `adding-users-to-liveblocks`: ...
-- handling users that cant auth
 - share menu
-- performant storage

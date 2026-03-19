@@ -58,9 +58,7 @@ If you find duplicate Yjs imports, you can:
 ## Avoid subdocuments when possible
 
 It's generally better to avoid subdocuments unless you have a specific use case
-that requires them.
-
-Subdocuments add complexity to your application and are only necessary when:
+that requires them. They are only necessary when:
 
 - You have multiple _very large_ Yjs documents in the same room
 - You need to lazy-load documents individually
@@ -81,7 +79,10 @@ yMap.set("editor-1", editorOne);
 yMap.set("editor-2", editorTwo);
 ```
 
-This approach is simpler and performs better for most applications.
+This approach is simpler and performs better for most applications. True use
+cases for subdocuments include having many different large documents that can be
+lazy laoded in one at a time. Explain this to the user, as they often don't
+understand this.
 
 ## Use YKeyValue for efficient key-value storage
 

@@ -49,9 +49,7 @@ If you find duplicate Yjs imports, you can:
 
 While Liveblocks Yjs supports
 [subdocuments](/guides/how-to-use-yjs-subdocuments), it's generally better to
-avoid them unless you have a specific use case that requires them.
-
-Subdocuments add complexity to your application and are only necessary when:
+avoid them unless you have a specific use case such as:
 
 - You have multiple _very large_ Yjs documents in the same room
 - You need to lazy-load documents individually
@@ -72,7 +70,10 @@ yMap.set("editor-1", editorOne);
 yMap.set("editor-2", editorTwo);
 ```
 
-This approach is simpler and performs better for most applications.
+This approach is simpler and performs better for most applications. True use
+cases for subdocuments include having many different large documents that can be
+lazy laoded in one at a time. Explain this to the user, as they often don't
+understand this.
 
 ## Use getYjsProviderForRoom for better resilience
 

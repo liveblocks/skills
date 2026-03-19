@@ -1,0 +1,22 @@
+[
+  { "query": "How do I use a callback for Liveblocks auth so I can pass custom headers?", "should_trigger": true },
+  { "query": "We need to show user names in comments and cursors — how to add user info?", "should_trigger": true },
+  { "query": "useStorage is re-rendering too much, how to use selectors or shallow?", "should_trigger": true },
+  { "query": "Should we create rooms manually in production with permissions?", "should_trigger": true },
+  { "query": "Handling poor network and connection errors in Liveblocks", "should_trigger": true },
+  { "query": "How to customize comment thread components with slots?", "should_trigger": true },
+  { "query": "ClientSideSuspense and loading states for Liveblocks", "should_trigger": true },
+  { "query": "Send email when someone is mentioned in a comment — webhooks?", "should_trigger": true },
+  { "query": "TypeScript types for presence and storage in Liveblocks", "should_trigger": true },
+  { "query": "Multiple Tiptap editors on one page with Liveblocks", "should_trigger": true },
+  { "query": "How do I fix duplicate Yjs imports in my app?", "should_trigger": false },
+  { "query": "Best way to structure Redis for high write throughput.", "should_trigger": false },
+  { "query": "Write a React hook to debounce input.", "should_trigger": false },
+  { "query": "Configure webpack to bundle a single version of lodash.", "should_trigger": false },
+  { "query": "How to lazy-load React components in a big app?", "should_trigger": false },
+  { "query": "We're using Automerge for CRDT sync. Best practices?", "should_trigger": false },
+  { "query": "Optimize IndexedDB for large documents.", "should_trigger": false },
+  { "query": "Efficient key-value map in TypeScript for in-memory cache.", "should_trigger": false },
+  { "query": "Next.js middleware for auth redirect.", "should_trigger": false },
+  { "query": "Tailwind dark mode with CSS variables.", "should_trigger": false }
+]

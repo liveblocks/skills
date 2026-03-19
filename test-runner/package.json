@@ -1,0 +1,24 @@
+{
+  "name": "skills-eval-runner",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "eval": "tsx src/index.ts",
+    "eval:evals": "tsx src/index.ts --evals-only",
+    "eval:trigger": "tsx src/index.ts --trigger",
+    "eval:skill": "tsx src/index.ts --"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.58",
+    "@ai-sdk/openai": "^3.0.41",
+    "ai": "^6.0.116",
+    "dotenv": "^17.3.1",
+    "open": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -2,8 +2,8 @@
 name: "yjs-best-practices"
 description:
   "Use this skill when implementing or debugging Yjs features. It helps with Yjs
-  import issues, subdocuments, key-value storage (`YKeyValue`), inefficient maps
-  (`Y.Map`), and experimental V2 encoding."
+  import issues, subdocuments, `YKeyValue`, `Y.Map`, and experimental V2
+  encoding."
 license: "Apache License 2.0"
 metadata:
   author: "liveblocks"

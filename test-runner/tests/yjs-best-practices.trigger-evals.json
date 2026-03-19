@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I'm seeing a Yjs warning in the console about importing Yjs twice — how do I fix duplicate imports?",
+    "should_trigger": true
+  },
+  {
+    "query": "We're using Y.Map for key-value storage and our Yjs document size is blowing up. Any way to make it more efficient?",
+    "should_trigger": true
+  },
+  {
+    "query": "Should I use subdocuments for multiple text editors on the same page with Liveblocks?",
+    "should_trigger": true
+  },
+  {
+    "query": "How do I enable experimental V2 encoding with getYjsProviderForRoom?",
+    "should_trigger": true
+  },
+  {
+    "query": "Yjs sync is broken — two instances don't share the same class references. Help?",
+    "should_trigger": true
+  },
+  {
+    "query": "Implementing Yjs with Liveblocks, need to organize several editors in one room without subdocuments.",
+    "should_trigger": true
+  },
+  {
+    "query": "our yjs doc is growing like crazy, we're updating keys in a Y.Map in alternating order",
+    "should_trigger": true
+  },
+  {
+    "query": "Debugging Yjs: mixing CJS and ESM and now we get sync issues. How to force a single Yjs instance?",
+    "should_trigger": true
+  },
+  {
+    "query": "What's the recommended way to do key-value storage in Yjs without Y.Map blowing up document size?",
+    "should_trigger": true
+  },
+  {
+    "query": "We have multiple very large Yjs docs in one room — should we use subdocuments or something else?",
+    "should_trigger": true
+  },
+  {
+    "query": "How do I fix duplicate React imports in my Next.js app?",
+    "should_trigger": false
+  },
+  {
+    "query": "We're using Automerge for CRDT sync. Best practices for conflict resolution?",
+    "should_trigger": false
+  },
+  {
+    "query": "Liveblocks presence and storage API — how do I structure room data?",
+    "should_trigger": false
+  },
+  {
+    "query": "Optimize our IndexedDB storage for large documents.",
+    "should_trigger": false
+  },
+  {
+    "query": "How to lazy-load React components in a big app?",
+    "should_trigger": false
+  },
+  {
+    "query": "Efficient key-value map data structure in TypeScript for in-memory cache.",
+    "should_trigger": false
+  },
+  {
+    "query": "Our WebSocket real-time sync has merge conflicts. What CRDT should we use?",
+    "should_trigger": false
+  },
+  {
+    "query": "Configure webpack/vite to bundle a single version of lodash.",
+    "should_trigger": false
+  },
+  {
+    "query": "Tiptap editor with Liveblocks — is that Yjs under the hood or something else?",
+    "should_trigger": false
+  },
+  {
+    "query": "Best way to structure Redis key-value storage for high write throughput.",
+    "should_trigger": false
+  }
+]

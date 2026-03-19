@@ -1,2 +1,9 @@
 .DS_Store
+.env
 .env*.local
+test-runner/node_modules
+test-runner/output
+test-runner/.env
+tests/runner/node_modules
+tests/runner/output
+tests/runner/.env

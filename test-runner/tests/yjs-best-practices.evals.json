@@ -1,0 +1,42 @@
+{
+  "skill_name": "yjs-best-practices",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm getting a Yjs warning in the console about importing Yjs twice. We're using Next.js and I think our bundler might be including more than one version. How do I fix this?",
+      "expected_output": "Instructions to fix duplicate Yjs imports: either package manager resolution (resolutions/overrides in package.json for npm/yarn/pnpm) or bundler config (aliases/resolve) so only one Yjs instance is used. Mention that duplicate imports break class reference sharing and cause sync issues.",
+      "assertions": [
+        "The response mentions package manager resolution (resolutions, overrides, or equivalent) or bundler configuration",
+        "The response does not suggest importing Yjs in a different file as the fix"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We have a Y.Map that we use for key-value storage. We're updating different keys in alternating order (key1, key2, key1, key2...) and the document size is huge. What should we use instead?",
+      "expected_output": "Recommend YKeyValue from y-utility for efficient key-value storage. Explain that Y.Map retains history for conflict resolution and grows with alternating writes; YKeyValue keeps document size proportional to map size, not operation count.",
+      "assertions": [
+        "The response recommends YKeyValue or y-utility/y-keyvalue",
+        "The response includes or references how to install or import (e.g. npm install y-utility)"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We want to put multiple rich text editors on the same page, all synced with Liveblocks. Should we use Yjs subdocuments for each editor?",
+      "expected_output": "Recommend avoiding subdocuments for multiple editors on the same page. Suggest using a single Y.Doc with a Y.Map (e.g. 'editors') and storing Y.XMLFragment (or similar) per editor in the map. Subdocuments are for very large docs or lazy-loading needs.",
+      "assertions": [
+        "The response says subdocuments are not necessary for multiple editors on the same page",
+        "The response suggests using a Y.Map to organize editors (or equivalent structure in one doc)",
+        "The response mentions when subdocuments are appropriate (e.g. very large docs, lazy-loading)"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're using getYjsProviderForRoom with Liveblocks. How can we get smaller document sizes and better performance when using maps?",
+      "expected_output": "Recommend enabling experimental V2 encoding: useV2Encoding_experimental: true in getYjsProviderForRoom options. Note that all clients must use the same options.",
+      "assertions": [
+        "The response mentions useV2Encoding_experimental or V2 encoding",
+        "The response states that all clients must have the same options (or equivalent caveat)"
+      ]
+    }
+  ]
+}

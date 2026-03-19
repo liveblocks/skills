@@ -1,0 +1,50 @@
+{
+  "skill_name": "liveblocks-best-practices",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to pass custom headers to my backend when Liveblocks fetches the auth token. Can I use a callback instead of a string for authEndpoint?",
+      "expected_output": "Recommend using a callback for authEndpoint (auth-endpoint-callback). Explain that a callback allows custom fetch logic, custom headers, and prevents automatic reconnection when the token is invalid.",
+      "assertions": [
+        "The response mentions auth-endpoint-callback or using a callback function for authEndpoint",
+        "The response mentions custom headers or custom fetch logic"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We want to show user names and avatars in our Liveblocks app — comments, cursors, and avatar stacks. How do we add user information so users aren't anonymous?",
+      "expected_output": "Recommend add-user-information. Explain it adds name, avatar, color, and is useful for comments, mention suggestions, notifications, cursors, avatar stacks.",
+      "assertions": [
+        "The response mentions add-user-information or adding user info",
+        "The response mentions at least one of: name, avatar, color, comments, cursors"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our Liveblocks storage is causing too many re-renders. How can we make storage updates more performant?",
+      "expected_output": "Recommend performant-storage-with-selectors. Explain using useStorage with selectors and shallow to prevent unnecessary re-renders.",
+      "assertions": [
+        "The response mentions performant-storage-with-selectors or useStorage selectors",
+        "The response mentions shallow or reducing re-renders"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're building a production app. Should we create Liveblocks rooms manually or let them be created automatically?",
+      "expected_output": "Recommend create-rooms-manually. Explain that in production you should always create rooms yourself, with permissions, organization, and metadata.",
+      "assertions": [
+        "The response mentions create-rooms-manually or creating rooms yourself",
+        "The response mentions production, permissions, or metadata"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Users with bad network connections are seeing errors. How do we handle unstable connections and show fallbacks?",
+      "expected_output": "Recommend handling-unstable-connections. Explain implementing fallbacks and error messages when users have poor network conditions.",
+      "assertions": [
+        "The response mentions handling-unstable-connections or handling unstable connections",
+        "The response mentions fallbacks, error messages, or poor network"
+      ]
+    }
+  ]
+}

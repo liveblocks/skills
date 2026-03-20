@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Develop skills locally by symlinking directoties in `/skills` to global skills directories:
+# Develop skills locally by symlinking all directories under `/skills` to global skills directories:
 DESTINATIONS=(
   "${HOME}/.claude/skills"
   "${HOME}/.codex/skills"

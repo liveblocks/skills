@@ -11,7 +11,7 @@ import { runAllTriggerQueries } from "./run-triggers.js";
 import { generateHtmlReport, generateTriggerReport } from "./report.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const OUTPUT_DIR = join(__dirname, "..", "output");
+const OUTPUT_DIR = join(__dirname, "..", ".results");
 const REPORT_PATH = join(OUTPUT_DIR, "report.html");
 const TRIGGER_REPORT_PATH = join(OUTPUT_DIR, "report-trigger.html");
 

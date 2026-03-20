@@ -14,7 +14,7 @@ help write Liveblocks code.
 
 ## Install
 
-TODO set this up
+Install with the following command:
 
 ```bash
 npx skills add liveblocks/skills
@@ -22,8 +22,7 @@ npx skills add liveblocks/skills
 
 ## Skills
 
-- `liveblocks-best-practices`: TODO
+Skills available in this repository:
 
-## Usage
-
-TODO
+- `liveblocks-best-practices`: Best practices for using Liveblocks.
+- `yjs-best-practices`: Best practices for using Yjs.

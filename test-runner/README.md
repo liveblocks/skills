@@ -20,6 +20,23 @@ ANTHROPIC_API_KEY=
 OPENAI_API_KEY=
 ```
 
+## Scripts
+
+Evals test the quality of AI responses, while triggers test the agent's decision
+to use the skill.
+
+| Script                            | What it runs                                    |
+| --------------------------------- | ----------------------------------------------- |
+| `npm run test:liveblocks`         | Evals + triggers for liveblocks-best-practices. |
+| `npm run test:liveblocks:evals`   | Evals only for liveblocks.                      |
+| `npm run test:liveblocks:trigger` | Triggers only for liveblocks.                   |
+| `npm run test:yjs`                | Evals + triggers for yjs-best-practices.        |
+| `npm run test:yjs:evals`          | Evals only for yjs.                             |
+| `npm run test:yjs:trigger`        | Triggers only for yjs.                          |
+
+Each run writes `.results/report.html` (evals) and/or `.results/report-trigger.html`
+(triggers) and opens them in your browser.
+
 ## Test files
 
 Eval and trigger test data live in `test-runner/tests/` as flat files per skill:
@@ -38,17 +55,3 @@ Skills are read from the repo `skills/<skill-name>/SKILL.md`.
 `TRIGGER_PASS_THRESHOLD` (0–1) to the fraction of runs that must match the
 expected trigger to pass. Default is `0.8` (80%): with 10 runs per query, at
 least 8 must be correct.
-
-## Scripts
-
-| Script                            | What it runs                                    |
-| --------------------------------- | ----------------------------------------------- |
-| `npm run test:liveblocks`         | Evals + triggers for liveblocks-best-practices. |
-| `npm run test:liveblocks:evals`   | Evals only for liveblocks.                      |
-| `npm run test:liveblocks:trigger` | Triggers only for liveblocks.                   |
-| `npm run test:yjs`                | Evals + triggers for yjs-best-practices.        |
-| `npm run test:yjs:evals`          | Evals only for yjs.                             |
-| `npm run test:yjs:trigger`        | Triggers only for yjs.                          |
-
-Each run writes `output/report.html` (evals) and/or `output/report-trigger.html`
-(triggers) and opens them in your browser.

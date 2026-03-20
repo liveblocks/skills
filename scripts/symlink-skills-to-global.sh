@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Symlink all skill folders in this repo to:
+# Develop skills locally by symlinking directoties in `/skills` to global skills directories:
 DESTINATIONS=(
   "${HOME}/.claude/skills"
   "${HOME}/.codex/skills"

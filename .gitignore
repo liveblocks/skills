@@ -2,7 +2,7 @@
 .env
 .env*.local
 test-runner/node_modules
-test-runner/output
+test-runner/.results
 test-runner/.env
 tests/runner/node_modules
 tests/runner/output

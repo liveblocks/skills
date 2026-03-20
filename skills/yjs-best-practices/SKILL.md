@@ -10,6 +10,8 @@ metadata:
   version: "1.0.0"
 ---
 
+# Yjs best practices
+
 ## When to use this skill
 
 Use this skill when implementing or debugging [Yjs](https://yjs.dev) features.

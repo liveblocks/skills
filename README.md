@@ -10,7 +10,8 @@
 # Liveblocks skills
 
 A collection of skills designed to help AI coding assistants help write
-Liveblocks and Yjs code.
+Liveblocks and Yjs code. Uses the [Agent Skills](https://agentskills.io/home)
+format.
 
 ## Install
 

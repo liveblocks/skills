@@ -9,8 +9,8 @@
 
 # Liveblocks skills
 
-A collection of skills containing rules designed to help AI coding assistants
-help write Liveblocks code.
+A collection of skills designed to help AI coding assistants help write
+Liveblocks and Yjs code.
 
 ## Install
 
@@ -22,7 +22,29 @@ npx skills add liveblocks/skills
 
 ## Skills
 
-Skills available in this repository:
+### `liveblocks-best-practices`
 
-- `liveblocks-best-practices`: Best practices for using Liveblocks.
-- `yjs-best-practices`: Best practices for using Yjs.
+Best practices for using Liveblocks. Contains 40+ comprehensive references
+related to each feature of Liveblocks. Use it when building, debugging, or
+answering questions about Liveblocks.
+
+### `yjs-best-practices`
+
+Best practices for using Yjs. Contains info on fixing common issues, structuring
+your data efficiently, and avoiding bugs. Use it when building, debugging, or
+answering questions about Yjs.
+
+## Usage
+
+After installation, skills are automatically available in your AI tool. Your
+agent will use them when it judges they are relevant.
+
+### Examples
+
+```
+How do I handle poor connections with Liveblocks?
+```
+
+```
+Why is my Y.Map growing so large?
+```

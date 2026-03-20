@@ -4,8 +4,8 @@ export interface EvalsFile {
     id: number;
     prompt: string;
     expected_output: string;
-    /** If set, inject this rule file's content into context (skills/<skill>/rules/<rule>.md). */
-    rule?: string;
+    /** If set, inject this reference file's content into context (skills/<skill>/references/<name>.md). */
+    reference?: string;
     files?: string[];
     assertions: string[];
   }>;

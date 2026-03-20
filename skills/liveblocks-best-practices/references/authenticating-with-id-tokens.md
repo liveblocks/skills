@@ -73,7 +73,7 @@ const room = await liveblocks.getOrCreateRoom("my-room-id", {
 });
 ```
 
-Read the `create-rooms-manually` rule for more information.
+Read the `create-rooms-manually` reference for more information.
 
 ## See also
 

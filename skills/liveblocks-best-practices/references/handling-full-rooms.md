@@ -31,4 +31,4 @@ function Component() {
 }
 ```
 
-To avoid this happening, read the rule on `avoid-hitting-user-limit-in-rooms`.
+To avoid this happening, read the reference on `avoid-hitting-user-limit-in-rooms`.

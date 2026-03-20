@@ -53,9 +53,9 @@ declare global {
 }
 ```
 
-See the `authenticating-with-id-tokens` rule for more information on this
+See the `authenticating-with-id-tokens` reference for more information on this
 recommedned authentication method. An alternative is to use access tokens, see
-the `authenticating-with-access-tokens` rule for more information.
+the `authenticating-with-access-tokens` reference for more information.
 
 ## Resolving users
 

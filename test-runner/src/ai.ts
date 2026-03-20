@@ -60,12 +60,12 @@ function createReadFileTool(skillName: string, repoRoot: string) {
   const skillRoot = join(repoRoot, "skills", skillName);
   return tool({
     description:
-      "Read a file from this skill. Path is relative to the skill folder (e.g. 'rules/auth-endpoint-callback.md'). Use this to open individual rule or doc files when you need details.",
+      "Read a file from this skill. Path is relative to the skill folder (e.g. 'references/auth-endpoint-callback.md'). Use this to open individual reference or doc files when you need details.",
     inputSchema: z.object({
       path: z
         .string()
         .describe(
-          "File path relative to the skill folder, e.g. rules/foo.md or SKILL.md"
+          "File path relative to the skill folder, e.g. references/foo.md or SKILL.md"
         ),
     }),
     execute: async ({ path: relativePath }) => {
@@ -102,7 +102,7 @@ export async function runEval(
 
   const systemBase = `You are an expert assistant. Use the following skill document to answer the user's question. Apply it precisely. Respond in Markdown: use **bold** for key terms, \`inline code\` for identifiers and APIs, and link to official docs where helpful. Summarize your answer in one paragraph of prose (add a short fenced code block only if the question requires it).`;
   const fileInstruction = options
-    ? `\n\nYou may read further files from this skill by calling the read_file tool with a path relative to the skill folder. You can only read files that exist; here are the files in this skill directory:\n\n${options.fileListing.map((f) => `- ${f}`).join("\n")}\n\nUse one of these paths when you need the full content of a rule or doc.`
+    ? `\n\nYou may read further files from this skill by calling the read_file tool with a path relative to the skill folder. You can only read files that exist; here are the files in this skill directory:\n\n${options.fileListing.map((f) => `- ${f}`).join("\n")}\n\nUse one of these paths when you need the full content of a reference or doc.`
     : "";
   const system = `${systemBase}${fileInstruction}\n\n---\n\n${skillContent}`;
 

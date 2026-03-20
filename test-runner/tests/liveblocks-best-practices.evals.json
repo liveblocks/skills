@@ -5,7 +5,7 @@
       "id": 1,
       "prompt": "We want to show user names and avatars in comments, cursors, and avatar stacks. How do we add user information so users aren't anonymous?",
       "expected_output": "Recommend auth and resolverUsers",
-      "rule": "add-user-information",
+      "reference": "add-user-information",
       "assertions": [
         "The response mentions authentication",
         "The response mentions resolveUsers",
@@ -16,7 +16,7 @@
       "id": 2,
       "prompt": "We want AI to collaborate like a human in our Liveblocks app — editing content and taking actions. How do we set up AI as a collaborator?",
       "expected_output": "Recommend ai-as-a-collaborator. Explain agentic workflows so AI can collaborate inside the app.",
-      "rule": "ai-as-a-collaborator",
+      "reference": "ai-as-a-collaborator",
       "assertions": [
         "The response mentions the agentic workflows documentation page"
       ]
@@ -25,7 +25,7 @@
       "id": 3,
       "prompt": "We need an AI chat with RAG, tool calling, and custom UI components in our app. Not the workflow-based collaborator — the chat/copilot kind. How do we set this up with Liveblocks?",
       "expected_output": "Recommend ai-chats-with-tools-knowledge-components. Explain Liveblocks AI Copilots: AiChat, RAG, knowledge, tools, custom components.",
-      "rule": "ai-chats-with-tools-knowledge-components",
+      "reference": "ai-chats-with-tools-knowledge-components",
       "assertions": [
         "The response mentions AiChat component",
         "The response mentions AI Copilots",
@@ -36,7 +36,7 @@
       "id": 4,
       "prompt": "how do I pass custom headers to my Liveblocks auth endpoint?",
       "expected_output": "Recommend authEndpoint with callback",
-      "rule": "auth-endpoint-callback",
+      "reference": "auth-endpoint-callback",
       "assertions": [
         "The response mentions using a callback for authEndpoint in LiveblocksProvider",
         "The response shows custom headers used in a fetch request"
@@ -46,7 +46,7 @@
       "id": 5,
       "prompt": "how do I auth with access tokens",
       "expected_output": "Explain about prepareSession.",
-      "rule": "authenticating-with-access-tokens",
+      "reference": "authenticating-with-access-tokens",
       "assertions": [
         "The response mentions access tokens",
         "The response mentions prepareSession",
@@ -57,7 +57,7 @@
       "id": 6,
       "prompt": "We need complex permissions per room and user. What's the recommended way to authenticate with Liveblocks?",
       "expected_output": "Recommend ID tokens",
-      "rule": "authenticating-with-id-tokens",
+      "reference": "authenticating-with-id-tokens",
       "assertions": [
         "The response recommends ID tokens",
         "The response mentions identifyUser"
@@ -67,7 +67,7 @@
       "id": 7,
       "prompt": "Our rooms are hitting the user limit. How can we avoid filling up with inactive users?",
       "expected_output": "Recommend backgroundKeepAliveTimeout on LiveblocksProvider",
-      "rule": "avoid-hitting-user-limit-in-rooms",
+      "reference": "avoid-hitting-user-limit-in-rooms",
       "assertions": [
         "The response mentions backgroundKeepAliveTimeout on LiveblocksProvider",
         "The response mentions user limit or room capacity"
@@ -87,7 +87,7 @@
       "id": 9,
       "prompt": "We need a fully custom comment composer that doesn't use the default one. How do we build our own with Liveblocks?",
       "expected_output": "Recommend useComposer and Composer.Form primitives",
-      "rule": "create-custom-comment-composer",
+      "reference": "create-custom-comment-composer",
       "assertions": [
         "The response mentions useComposer",
         "The response mentions Composer.Form",
@@ -98,7 +98,7 @@
       "id": 10,
       "prompt": "We're building a Figma-like or custom multiplayer canvas with conflict-free state. How do we use Liveblocks for custom realtime multiplayer beyond text editors?",
       "expected_output": "Recommend create-custom-realtime-multiplayer. Explain Liveblocks Storage with LiveList, LiveMap, LiveObject for custom multiplayer apps.",
-      "rule": "create-custom-realtime-multiplayer",
+      "reference": "create-custom-realtime-multiplayer",
       "assertions": [
         "The response mentions Liveblocks Storage or LiveList/LiveMap/LiveObject",
         "The response mentions custom multiplayer or sync engine"
@@ -108,7 +108,7 @@
       "id": 11,
       "prompt": "We want a custom toolbar for our Lexical editor that matches our design — static or floating. How do we do this with Liveblocks?",
       "expected_output": "Recommend Toolbar or FloatingToolbar",
-      "rule": "create-custom-text-editor-toolbar",
+      "reference": "create-custom-text-editor-toolbar",
       "assertions": [
         "The response mentions Toolbar or FloatingToolbar",
         "The response mentions Lexical"
@@ -118,7 +118,7 @@
       "id": 12,
       "prompt": "Should we create Liveblocks rooms manually in production or let them be created on first connection?",
       "expected_output": "Recommend getOrCreateRoom",
-      "rule": "create-rooms-manually",
+      "reference": "create-rooms-manually",
       "assertions": [
         "The response recommends creating rooms yourself in production",
         "The response mentions getOrCreateRoom",
@@ -129,7 +129,7 @@
       "id": 13,
       "prompt": "We want to customize how comments look inside threads — avatars, author, body. Can we use slots or override parts of the Thread component?",
       "expected_output": "Recommend Thread component slots",
-      "rule": "customize-thread-components",
+      "reference": "customize-thread-components",
       "assertions": [
         "The response mentions customizing Thread or comment components with slots",
         "The response mentions components or slots for avatar, author, or comment body"
@@ -139,7 +139,7 @@
       "id": 14,
       "prompt": "Our app supports dark mode. How do we get dark mode styles for Liveblocks UI components?",
       "expected_output": "Recommend dark-mode-styles. Explain importing @liveblocks/react-ui styles and dark theme (media-query or attributes).",
-      "rule": "dark-mode-styles",
+      "reference": "dark-mode-styles",
       "assertions": [
         "The response mentions importing Liveblocks dark mode CSS",
         "The response mentions prefers-color-scheme"
@@ -149,7 +149,7 @@
       "id": 15,
       "prompt": "We want to develop and run E2E tests without hitting Liveblocks production. How do we develop and test locally?",
       "expected_output": "Recommend dev server",
-      "rule": "develop-and-test-locally",
+      "reference": "develop-and-test-locally",
       "assertions": [
         "The response mentions the Liveblocks dev server",
         "The response mentions E2E testing, perhaps with a tool like Playwright"
@@ -159,7 +159,7 @@
       "id": 16,
       "prompt": "How can we inspect Liveblocks Storage, Yjs state, presence, and connected users in the browser?",
       "expected_output": "Recommend DevTools extension",
-      "rule": "devtools-extension",
+      "reference": "devtools-extension",
       "assertions": [
         "The response mentions Liveblocks DevTools",
         "The response mentions inspecting Storage, presence, or connected users"
@@ -169,7 +169,7 @@
       "id": 17,
       "prompt": "We need to change button labels and tooltips in Liveblocks components (e.g. 'Reply' to 'Comment') and support other languages. How?",
       "expected_output": "Recommend overrides",
-      "rule": "edit-component-text-strings",
+      "reference": "edit-component-text-strings",
       "assertions": [
         "The response mentions overriding strings or locale for Liveblocks components",
         "The response mentions LiveblocksUiConfig or separate component overrides"
@@ -179,7 +179,7 @@
       "id": 18,
       "prompt": "Users sometimes can't join the room, how do we handle these connection errors in Liveblocks?",
       "expected_output": "Recommend useErrorListener",
-      "rule": "handling-connection-errors",
+      "reference": "handling-connection-errors",
       "assertions": [
         "The response mentions useErrorListener",
         "The response mentions ROOM_CONNECTION_ERROR or error codes (e.g. 4001, 4005, 4006)"
@@ -189,7 +189,7 @@
       "id": 19,
       "prompt": "What do we do when a user tries to join a Liveblocks room that's already full?",
       "expected_output": "Recommend useErrorListener and checking for code 4005",
-      "rule": "handling-full-rooms",
+      "reference": "handling-full-rooms",
       "assertions": [
         "The response mentions handling full rooms",
         "The response mentions useErrorListener",
@@ -200,7 +200,7 @@
       "id": 20,
       "prompt": "useCreateThread sometimes throws. How do we catch and handle these errors?",
       "expected_output": "Recommend useErrorListener for CREATE_THREAD_ERROR",
-      "rule": "handling-hook-and-component-errors",
+      "reference": "handling-hook-and-component-errors",
       "assertions": [
         "The response mentions useErrorListener",
         "The response mentions CREATE_THREAD_ERROR"
@@ -210,7 +210,7 @@
       "id": 21,
       "prompt": "Users with poor network see disconnections. How do we show fallbacks and messages when the Liveblocks connection is lost or restored?",
       "expected_output": "Recommend useLostConnectionListener",
-      "rule": "handling-unstable-connections",
+      "reference": "handling-unstable-connections",
       "assertions": [
         "The response mentions useLostConnectionListener",
         "The response mentions lost, restored, or failed connection states",
@@ -221,7 +221,7 @@
       "id": 22,
       "prompt": "We have an SPA and need to log the user out of Liveblocks and reauthenticate without a full page refresh. How?",
       "expected_output": "Recommend client.logout()",
-      "rule": "log-out-of-liveblocks",
+      "reference": "log-out-of-liveblocks",
       "assertions": [
         "The response mentions client.logout()",
         "The response mentions useClient",
@@ -232,7 +232,7 @@
       "id": 23,
       "prompt": "We need several Tiptap editors on the same page, each synced with Liveblocks. How do we do this?",
       "expected_output": "Recommend the field prop",
-      "rule": "multiple-text-editors",
+      "reference": "multiple-text-editors",
       "assertions": [
         "The response mentions the field prop",
         "The response mentions Tiptap with Liveblocks",
@@ -243,7 +243,7 @@
       "id": 24,
       "prompt": "We want the BlockNote text editor to load instantly from cache, without a loading spinner. How do we enable offline support?",
       "expected_output": "Recommend offlineSupport_experimental",
-      "rule": "offline-support-in-text-editors",
+      "reference": "offline-support-in-text-editors",
       "assertions": [
         "The response mentions offline support",
         "The response mentions offlineSupport_experimental",
@@ -254,7 +254,7 @@
       "id": 25,
       "prompt": "We want to style Liveblocks default components (comments, buttons) to match our app. Can we override colors and spacing?",
       "expected_output": "Recommend .lb-root and CSS variables",
-      "rule": "override-css-variables",
+      "reference": "override-css-variables",
       "assertions": [
         "The response mentions CSS variables",
         "The response mentions .lb-root",
@@ -265,7 +265,7 @@
       "id": 26,
       "prompt": "Presence and useOthers are updating too often and our cursor/avatar components re-render constantly. How do we make presence updates more performant?",
       "expected_output": "Recommend performant presence hooks",
-      "rule": "performant-others-and-presence",
+      "reference": "performant-others-and-presence",
       "assertions": [
         "The response mentions (useOthersMapped and shallow) OR (useOther and useOtherConnectionIds)",
         "The response mentions reducing renders"
@@ -275,7 +275,7 @@
       "id": 27,
       "prompt": "useStorage is causing too many re-renders when any part of storage changes. How do we make storage reads more performant?",
       "expected_output": "Recommend useStorage with selectors",
-      "rule": "performant-storage-with-selectors",
+      "reference": "performant-storage-with-selectors",
       "assertions": [
         "The response mentions useStorage with selector functions",
         "The response mentions shallow",
@@ -286,7 +286,7 @@
       "id": 28,
       "prompt": "Users sometimes close the tab before Liveblocks has synced their changes. How do we warn them and prevent losing unsaved data?",
       "expected_output": "Recommend preventUnsavedChanges on LiveblocksProvider",
-      "rule": "prevent-unsaved-changes-being-lost",
+      "reference": "prevent-unsaved-changes-being-lost",
       "assertions": [
         "The response mentions preventUnsavedChanges on LiveblocksProvider",
         "The response describes what it prevents"
@@ -296,7 +296,7 @@
       "id": 29,
       "prompt": "We want to build our own comment UI using our design system but still need comment body, mentions, links. Can we use low-level pieces from Liveblocks?",
       "expected_output": "Recommend primitives",
-      "rule": "primitive-component-parts",
+      "reference": "primitive-component-parts",
       "assertions": [
         "The response mentions primitives",
         "The response mentions Comment.Body or other primitives",
@@ -307,7 +307,7 @@
       "id": 30,
       "prompt": "How do we remove or hide the 'Powered by Liveblocks' badge from our app?",
       "expected_output": "Recommend dashboard setting and badgeLocation",
-      "rule": "remove-liveblocks-branding",
+      "reference": "remove-liveblocks-branding",
       "assertions": [
         "The response mentions removing the Liveblocks branding or badge",
         "The response mentions dashboard settings",
@@ -318,7 +318,7 @@
       "id": 31,
       "prompt": "We use Liveblocks suspense hooks. How do we show error fallbacks when a hook throws (e.g. room failed to load)?",
       "expected_output": "Recommend ErrorBoundary",
-      "rule": "rendering-error-components",
+      "reference": "rendering-error-components",
       "assertions": [
         "The response mentions ErrorBoundary for error fallbacks",
         "The response mentions suspense hooks or handling hook errors"
@@ -328,7 +328,7 @@
       "id": 32,
       "prompt": "We use Liveblocks suspense hooks. How do we show loading spinners or skeletons while the room is connecting?",
       "expected_output": "Recommend ClientSideSuspense ",
-      "rule": "rendering-loading-components",
+      "reference": "rendering-loading-components",
       "assertions": [
         "The response mentions ClientSideSuspense for loading fallbacks",
         "The response mentions suspense hooks or loading state"
@@ -338,7 +338,7 @@
       "id": 33,
       "prompt": "We want to email users when they're mentioned in a comment or have unread thread activity. How do we send comment notification emails with Liveblocks?",
       "expected_output": "Recommend webhooks and @liveblocks/emails",
-      "rule": "send-comment-notification-emails",
+      "reference": "send-comment-notification-emails",
       "assertions": [
         "The response mentions webhooks",
         "The response mentions sending emails",
@@ -349,7 +349,7 @@
       "id": 34,
       "prompt": "Presence and storage updates feel choppy. Can we make Liveblocks updates smoother (higher frame rate)?",
       "expected_output": "Recommend throttle on LiveblocksProvider",
-      "rule": "smoother-realtime-updates",
+      "reference": "smoother-realtime-updates",
       "assertions": [
         "The response mentions throttle on LiveblocksProvider",
         "The response mentions 60fps or smoother updates"
@@ -359,7 +359,7 @@
       "id": 35,
       "prompt": "What's the difference between importing from @liveblocks/react and @liveblocks/react/suspense? When do we use ClientSideSuspense and when do we use isLoading?",
       "expected_output": "Provide info on suspense vs regular hooks",
-      "rule": "suspense-vs-regular-hooks",
+      "reference": "suspense-vs-regular-hooks",
       "assertions": [
         "The response explains the difference between /suspense and regular hooks",
         "The response mentions `ClientSideSuspense`",
@@ -372,7 +372,7 @@
       "id": 36,
       "prompt": "We're using Tiptap with Liveblocks. What do we need for SSR, initial content, unsaved changes, and required extensions?",
       "expected_output": "Recommend best practices",
-      "rule": "tiptap-best-practices",
+      "reference": "tiptap-best-practices",
       "assertions": [
         "The response mentions StarterKit or Doc/Paragraph for Tiptap",
         "The response mentions at least one of: SSR, initial content, unsaved changes, Liveblocks"
@@ -382,7 +382,7 @@
       "id": 37,
       "prompt": "We want to send a notification to a user's Liveblocks inbox for something that isn't a comment — e.g. someone uploaded a file. How do we trigger custom notifications?",
       "expected_output": "Recommend triggerInboxNotification",
-      "rule": "trigger-custom-notifications",
+      "reference": "trigger-custom-notifications",
       "assertions": [
         "The response mentions triggerInboxNotification",
         "The response mentions custom kind (e.g. $ prefix)",
@@ -393,7 +393,7 @@
       "id": 38,
       "prompt": "How do we get TypeScript types for Liveblocks presence, storage, user info, and room metadata across our app?",
       "expected_output": "Recommend liveblocks.config.ts types",
-      "rule": "type-liveblocks-correctly",
+      "reference": "type-liveblocks-correctly",
       "assertions": [
         "The response mentions typing Liveblocks",
         "The response mentions liveblocks.config.ts",
@@ -404,7 +404,7 @@
       "id": 39,
       "prompt": "Our app has one document per URL (e.g. /doc/abc123). How should we set the Liveblocks room ID — use the document ID from the URL?",
       "expected_output": "Recommend using URL params",
-      "rule": "url-params-in-room-id",
+      "reference": "url-params-in-room-id",
       "assertions": [
         "The response recommends using URL params as room ID",
         "The response mentions document or room ID from URL"
@@ -414,7 +414,7 @@
       "id": 40,
       "prompt": "We need a relative timestamp ('5 minutes ago') and an emoji picker in our Liveblocks UI. Does Liveblocks provide these?",
       "expected_output": "Recommend utility components",
-      "rule": "utility-components",
+      "reference": "utility-components",
       "assertions": [
         "The response mentions Timestamp, Duration, EmojiPicker or utility components",
         "The response mentions @liveblocks/react-ui primitives or utilities"
@@ -424,7 +424,7 @@
       "id": 41,
       "prompt": "We're using Yjs with Liveblocks (not Tiptap/BlockNote/Lexical). What are best practices?",
       "expected_output": "Recommend best practices",
-      "rule": "yjs-best-practices",
+      "reference": "yjs-best-practices",
       "assertions": [
         "The response mentions getYjsProviderForRoom",
         "The response mentions YKeyValue",
@@ -436,7 +436,7 @@
       "id": 42,
       "prompt": "Tooltips and dropdowns from Liveblocks components are rendering behind our app's modals. How do we fix z-index issues with portaled elements?",
       "expected_output": "Recommend z-index fixes.",
-      "rule": "z-index-issues",
+      "reference": "z-index-issues",
       "assertions": [
         "The response mentions z-index",
         "The response mentions .lb-portal"

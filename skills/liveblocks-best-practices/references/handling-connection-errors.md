@@ -31,7 +31,7 @@ function Comments() {
 ```
 
 Note that this is different to handling a poor or unstable connection, read the
-`handling-unstable-connections` rule for that.
+`handling-unstable-connections` reference for that.
 
 ## Other errors
 

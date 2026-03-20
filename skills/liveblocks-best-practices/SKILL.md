@@ -39,6 +39,13 @@ Flow, tldraw, and more.
 
 ## Quick reference
 
+A number of reference files are available in the `references/` directory. You
+must read the list below, and load relevant files as needed. For example,
+`add-user-information` is available in the `references/add-user-information.md`
+file.
+
+## References
+
 - `add-user-information`: Add user information to your application, such as
   name, avatar, color, and more. Users will no longer be anonymous. Useful for
   displaying user info in comments, comments mention suggestions, notifications,

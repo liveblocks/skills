@@ -8,15 +8,12 @@ Tiptap and BlockNote both support multiple text editors on one page by passing
 values to the `field` property. Think of it like an ID for the current editor.
 
 ```tsx
-import { useCreateBlockNoteWithLiveblocks } from "@liveblocks/react-blocknote";
+import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
 
 function TextEditor() {
-  const editor = useCreateBlockNoteWithLiveblocks(
-    {},
-    {
-      field: "editor-one",
-    }
-  );
+  const liveblocks = useLiveblocksExtension({
+    field: "editor-one",
+  });
 
   // ...
 }
@@ -26,8 +23,8 @@ In real use, you could store each editor's ID in Liveblocks storage:
 
 ```tsx
 import { useStorage, useMutation } from "@liveblocks/react/suspense";
-import { useCreateBlockNoteWithLiveblocks } from "@liveblocks/react-blocknote";
-import { BlockNoteView } from "@blocknote/mantine";
+import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
+import { useEditor, EditorContent } from "@tiptap/react";
 
 function TextEditors() {
   const editorIds = useStorage((root) => root.editorIds);
@@ -48,16 +45,13 @@ function TextEditors() {
 }
 
 function TextEditor({ field }: { field: string }) {
-  const editor = useCreateBlockNoteWithLiveblocks(
-    {},
-    {
-      field,
-    }
-  );
+  const liveblocks = useLiveblocksExtension({
+    field: "editor-one",
+  });
 
   return (
     <div>
-      <BlockNoteView editor={editor} />
+      <EditorContent editor={editor} />
     </div>
   );
 }

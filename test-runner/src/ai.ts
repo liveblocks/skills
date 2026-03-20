@@ -2,8 +2,40 @@ import { readFileSync } from "fs";
 import { join, normalize } from "path";
 import { anthropic } from "@ai-sdk/anthropic";
 import { openai } from "@ai-sdk/openai";
-import { generateText, stepCountIs, tool, type LanguageModel } from "ai";
+import {
+  generateText,
+  Output,
+  stepCountIs,
+  tool,
+  type LanguageModel,
+} from "ai";
 import { z } from "zod";
+
+type GenerateTextLike = {
+  text?: string;
+  steps?: ReadonlyArray<{ text?: string }>;
+  finishReason?: string;
+  rawFinishReason?: string | undefined;
+};
+
+/**
+ * AI SDK `generateText` sets `text` to the last step only. If the final step is
+ * tool-only (e.g. read_file with no assistant text in that turn), `text` is "".
+ * For evals we need the last assistant text from any step.
+ */
+function textFromGenerateResult(result: GenerateTextLike): string {
+  const lastStepText = (result.text ?? "").trim();
+  if (lastStepText) return lastStepText;
+
+  const steps = result.steps ?? [];
+  for (let i = steps.length - 1; i >= 0; i--) {
+    const t = (steps[i]?.text ?? "").trim();
+    if (t) return t;
+  }
+
+  const fr = result.finishReason ?? result.rawFinishReason ?? "unknown";
+  return `(empty response; finishReason: ${String(fr)})`;
+}
 
 function getModel(): LanguageModel {
   if (process.env.ANTHROPIC_API_KEY) {
@@ -68,7 +100,7 @@ export async function runEval(
   const model = getModel();
   const start = Date.now();
 
-  const systemBase = `You are an expert assistant. Use the following skill document to answer the user's question. Apply it precisely and concisely.`;
+  const systemBase = `You are an expert assistant. Use the following skill document to answer the user's question. Apply it precisely. Respond in Markdown: use **bold** for key terms, \`inline code\` for identifiers and APIs, and link to official docs where helpful. Summarize your answer in one paragraph of prose (add a short fenced code block only if the question requires it).`;
   const fileInstruction = options
     ? `\n\nYou may read further files from this skill by calling the read_file tool with a path relative to the skill folder. You can only read files that exist; here are the files in this skill directory:\n\n${options.fileListing.map((f) => `- ${f}`).join("\n")}\n\nUse one of these paths when you need the full content of a rule or doc.`
     : "";
@@ -85,7 +117,10 @@ export async function runEval(
     maxOutputTokens: 2048,
     ...(tools && {
       tools,
-      stopWhen: stepCountIs(5),
+      // stepCountIs(n) stops after n model rounds. If the nth round is only
+      // tool calls, we never get a follow-up text step → finishReason stays
+      // "tool-calls" and text is empty. Allow several read_file rounds + answer.
+      stopWhen: stepCountIs(12),
     }),
   });
 
@@ -99,7 +134,7 @@ export async function runEval(
     totalTokens: u?.totalTokens ?? promptTokens + completionTokens,
   };
   return {
-    text: result.text,
+    text: textFromGenerateResult(result),
     duration_ms,
     usage,
   };
@@ -111,47 +146,60 @@ export async function gradeResponse(
 ): Promise<{
   assertion_results: Array<{ text: string; passed: boolean; evidence: string }>;
 }> {
+  if (assertions.length === 0) {
+    return { assertion_results: [] };
+  }
+
   const model = getModel();
   const prompt = `You are grading an assistant's response against a list of assertions.
 
 **Assistant's response:**
 ${response}
 
-**Assertions to check (each must be PASS or FAIL with brief evidence):**
+**Assertions to check (same order — one verdict per assertion):**
 ${assertions.map((a, i) => `${i + 1}. ${a}`).join("\n")}
 
-Respond with a JSON object only, no markdown or extra text. Use this exact shape:
-{"assertion_results": [{"text": "<assertion>", "passed": true|false, "evidence": "<one sentence>"}, ...]}
+Grade strictly: PASS only if the response clearly satisfies the assertion; FAIL with brief evidence if it does not.`;
 
-Grade strictly: PASS only if the response clearly satisfies the assertion; FAIL with evidence if it does not.`;
-
-  const result = await generateText({
-    model,
-    prompt,
-    maxOutputTokens: 1024,
+  const gradingSchema = z.object({
+    assertion_results: z
+      .array(
+        z.object({
+          passed: z.boolean(),
+          evidence: z
+            .string()
+            .describe("One short sentence; paraphrase quotes instead of embedding raw quotation marks."),
+        })
+      )
+      .length(assertions.length),
   });
 
-  const raw = result.text.trim();
-  const jsonMatch = raw.match(/\{[\s\S]*\}/);
-  const jsonStr = jsonMatch ? jsonMatch[0] : raw;
   try {
-    const parsed = JSON.parse(jsonStr) as {
-      assertion_results: Array<{
-        text: string;
-        passed: boolean;
-        evidence: string;
-      }>;
+    const result = await generateText({
+      model,
+      prompt,
+      maxOutputTokens: 4096,
+      output: Output.object({
+        schema: gradingSchema,
+        name: "assertion_grading",
+        description: "Pass/fail per assertion, in order",
+      }),
+    });
+
+    const graded = result.output;
+    return {
+      assertion_results: graded.assertion_results.map((r, i) => ({
+        text: assertions[i],
+        passed: r.passed,
+        evidence: r.evidence,
+      })),
     };
-    if (!Array.isArray(parsed.assertion_results)) {
-      throw new Error("Missing assertion_results array");
-    }
-    return parsed;
   } catch (e) {
     return {
       assertion_results: assertions.map((text) => ({
         text,
         passed: false,
-        evidence: `Grading failed: ${e instanceof Error ? e.message : String(e)}. Raw: ${raw.slice(0, 200)}`,
+        evidence: `Grading failed: ${e instanceof Error ? e.message : String(e)}`,
       })),
     };
   }

@@ -1,18 +1,24 @@
 ---
 name: "liveblocks-best-practices"
-description:
-  "Use this skill when building, debugging, or answering questions about
-  Liveblocks. Liveblocks gives you the building blocks and infrastructure to
-  enable people and AI to work together inside your app, powering realtime
-  collaboration. Liveblocks features include collaboration, rooms,
-  organizations, workspaces, comments, composer, threads, notifications,
-  multiplayer, conflict resolution, realtime presence, avatar stacks, AI
-  collaborators, AI agents, text editors, Tiptap, BlockNote, Lexical. Common
-  components include AiChat, Thread, InboxNotification, Composer, Toolbar.
+description: "Use this skill when building, debugging, or answering questions
+  about Liveblocks. Liveblocks gives you the building blocks and infrastructure
+  to enable people and AI to work together inside your app, powering realtime
+  collaboration.
+
+  Liveblocks features include collaboration, rooms, organizations, workspaces,
+  comments, composer, threads, notifications, multiplayer, conflict resolution,
+  realtime presence, avatar stacks, AI collaborators, AI agents, text editors,
+  Tiptap, BlockNote, Lexical.
+
+  Common components include AiChat, Thread, InboxNotification, Composer, Toolbar
+  (for Lexical Tiptap), FloatingToolbar, FloatingComposer, FloatingThreads,
+  AnchoredThreads.
+
   Common hooks include useThreads, useStorage, useMutation, useOthers,
-  useInboxNotifications, useAiChats. Common issues are related to authentication
-  (ID tokens vs access tokens), permissions, room limits, connection errors,
-  user info."
+  useInboxNotifications, useAiChats.
+
+  Common issues are related to authentication (ID tokens vs access tokens),
+  permissions, room limits, connection errors, user info."
 license: "Apache License 2.0"
 metadata:
   author: "liveblocks"
@@ -129,3 +135,18 @@ Flow, tldraw, and more.
   getYjsProviderForRoom. NOT relevant if you're using Tiptap, BlockNote, or
   Lexical.
 - `z-index-issues`: Fix z-index problems by targeting portaled elements.
+
+## Note
+
+Some files link to markdown files in the Liveblocks docs, for example:
+
+```
+https://liveblocks.io/docs/concepts.md
+```
+
+When linking users to these pages, remove `.md` from the link, so they can view
+the full content:
+
+```
+https://liveblocks.io/docs/concepts
+```

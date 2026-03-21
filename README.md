@@ -47,5 +47,9 @@ How do I handle unstable Wi-Fi connections with Liveblocks?
 ```
 
 ```
+How do I pass custom headers to my auth endpoint?
+```
+
+```
 Why is my Y.Map growing so large?
 ```

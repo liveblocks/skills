@@ -8,7 +8,7 @@ description: "Use this skill when building, debugging, or answering questions
   Liveblocks features include collaboration, rooms, organizations, workspaces,
   comments, composer, threads, notifications, multiplayer, conflict resolution,
   realtime presence, avatar stacks, AI collaborators, AI agents, text editors,
-  Tiptap, BlockNote, Lexical.
+  Tiptap, BlockNote, Lexical, React Flow, Chat SDK.
 
   Common components include AiChat, Thread, InboxNotification, Composer, Toolbar
   (for Lexical Tiptap), FloatingToolbar, FloatingComposer, FloatingThreads,

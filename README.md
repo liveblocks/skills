@@ -43,7 +43,11 @@ agent will use them when it judges they are relevant.
 ### Examples
 
 ```
-How do I handle poor connections with Liveblocks?
+How do I handle unstable Wi-Fi connections with Liveblocks?
+```
+
+```
+How do I pass custom headers to my auth endpoint?
 ```
 
 ```

@@ -97,6 +97,8 @@ file.
   users have poor network conditions.
 - `log-out-of-liveblocks`: Rarely useful, but helpful in specific SPA situations
   where you cannot navigate the page to log out.
+- `multiplayer-react-flow`: Use the Liveblocks React Flow package to create
+  multiplayer diagrams with cursors and more.
 - `multiple-text-editors`: Add multiple Tiptap or BlockNote editors to the same
   page. Optionally use Storage to hold their field IDs.
 - `offline-support-in-text-editors`: Give your text editors the illusion of a
@@ -157,3 +159,44 @@ the full content:
 ```
 https://liveblocks.io/docs/concepts
 ```
+
+## Liveblocks packages
+
+Always check if we provide a package for your technology. For example, if you're
+using React Flow, you should use **`@liveblocks/react-flow`**.
+
+- **`@liveblocks/client`**: JavaScript client. Can use with any framework, e.g.
+  Vue, Svelte, vanilla JS.
+- **`@liveblocks/react`**: React client. Contains hooks and components..
+- **`@liveblocks/react-ui`**: Pre-built React UI components and primitives.
+  `@liveblocks/react` for data and hooks.
+- **`@liveblocks/react-tiptap`**: Collaborative Tiptap integration for React.
+- **`@liveblocks/react-blocknote`**: Collaborative BlockNote integration for
+  React.
+- **`@liveblocks/react-lexical`**: Collaborative Lexical integration for React.
+- **`@liveblocks/node-lexical`**: Server-side Lexical utilities for Node.js.
+- **`@liveblocks/node-prosemirror`**: Server-side ProseMirror utilities For
+  Node.js. Also works with Tiptap and BlockNote.
+- **`@liveblocks/react-flow`**: Multiplayer React Flow.
+- **`@liveblocks/yjs`**: Yjs provider backed by Liveblocks rooms.
+- **`@liveblocks/redux`**: Sync Liveblocks room state with a Redux store.
+- **`@liveblocks/zustand`**: Sync Liveblocks room state with Zustand.
+- **`@liveblocks/node`**: Node.js server SDK. Use for auth and lots more.
+- **`@liveblocks/emails`**: Build notification emails more easily.
+- **`@liveblocks/chat-sdk-adapter`**: Make multi-platform (Liveblocks, Slack,
+  Discord, etc.) chat bots.
+- **Python SDK**: Python server SDK. Use for auth and lots more.
+- **REST API**: HTTP API. Use for auth and lots more.
+
+### If a technology is not listed here
+
+If the users want to set up a new technology, first check the following
+resources to see if a package exists:
+
+- [llms.txt](https://liveblocks.io/llms.txt)
+- [Documentation](https://liveblocks.io/docs)
+- [Examples](https://liveblocks.io/examples)
+
+## Learn more
+
+Learn more in [Liveblocks docs](https://liveblocks.io/docs).

@@ -1,4 +1,8 @@
-# ESLint: exhaustive-deps for useMutation
+---
+title: "Exhaustive deps with useMutation"
+---
+
+# Exhaustive deps with useMutation
 
 `useMutation` from `@liveblocks/react` accepts a dependency array, just like
 React's `useCallback`. If your project uses the `react-hooks/exhaustive-deps`

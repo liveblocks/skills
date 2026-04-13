@@ -88,6 +88,8 @@ file.
 - `edit-component-text-strings`: Override strings in default components, such as
   button values, tooltip text, error text, more. Also helpful for setting other
   languages.
+- `exhaustive-deps-with-usemutation`: Prevent and fix stale-closure bugs with
+  `useMutation` by configuring the `react-hooks/exhaustive-deps` ESLint rule.
 - `handling-connection-errors`: Handle problems joining rooms because of
   permissions, authentication, changed room IDs.
 - `handling-full-rooms`: Handle problems caused by joining full rooms.

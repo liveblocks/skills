@@ -141,26 +141,9 @@ file.
 - `yjs-best-practices`: YKeyValue, subdocuments, V2 encoding, double imports,
   getYjsProviderForRoom. NOT relevant if you're using Tiptap, BlockNote, or
   Lexical.
+- `exhaustive-deps-with-usemutation`: Prevent and fix stale-closure bugs with
+  `useMutation` by configuring the `react-hooks/exhaustive-deps` ESLint rule.
 - `z-index-issues`: Fix z-index problems by targeting portaled elements.
-
-## ESLint: exhaustive-deps for useMutation
-
-`useMutation` accepts a dependency array just like `useCallback`. Projects using
-the `react-hooks/exhaustive-deps` rule should configure it to also check
-`useMutation` deps:
-
-```json
-{
-  "rules": {
-    "react-hooks/exhaustive-deps": ["error", {
-      "additionalHooks": "useMutation"
-    }]
-  }
-}
-```
-
-Without this, the linter won't warn about missing dependencies in `useMutation`
-calls, which can lead to stale closures.
 
 ## Note
 

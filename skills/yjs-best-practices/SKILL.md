@@ -83,7 +83,7 @@ yMap.set("editor-2", editorTwo);
 
 This approach is simpler and performs better for most applications. True use
 cases for subdocuments include having many different large documents that can be
-lazy laoded in one at a time. Explain this to the user, as they often don't
+lazy loaded in one at a time. Explain this to the user, as they often don't
 understand this.
 
 ## Use YKeyValue for efficient key-value storage

@@ -12,15 +12,15 @@ don’t.
 
 ```tsx
 // Import the Suspense hook
-import { useThreads } from "@/liveblocks/react/suspense";
+import { useThreads } from "@liveblocks/react/suspense";
 
 // Import the regular hook
-import { useThreads } from "@/liveblocks/react";
+import { useThreads } from "@liveblocks/react";
 ```
 
 ### Suspense hooks (often easier)
 
-Suspense hooks can be wrapped in [`ClientSideSuspense`][], which acts as a
+Suspense hooks can be wrapped in `ClientSideSuspense`, which acts as a
 loading spinner for any components below it. When using this, all components
 below will only render once their hook contents have been loaded.
 
@@ -42,7 +42,7 @@ function Component() {
 ```
 
 Advanced hooks using the `{ ..., error, isLoading }` syntax, such as
-[`useThreads`][https://liveblocks.io/docs/api-reference/liveblocks-react#useThreads],
+[`useThreads`](https://liveblocks.io/docs/api-reference/liveblocks-react#useThreads),
 can also use [`ErrorBoundary`](https://github.com/bvaughn/react-error-boundary)
 to render an error if the hook runs into a problem.
 
@@ -94,7 +94,7 @@ function Component() {
 ```
 
 Advanced hooks using the `{ ..., error, isLoading }` syntax, such as
-[`useThreads`][https://liveblocks.io/docs/api-reference/liveblocks-react#useThreads],
+[`useThreads`](https://liveblocks.io/docs/api-reference/liveblocks-react#useThreads),
 require you to make sure there isn’t a problem before using the data.
 
 ```tsx

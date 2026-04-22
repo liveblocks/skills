@@ -11,7 +11,8 @@
 
 A collection of skills designed to help AI coding assistants help write
 Liveblocks and Yjs code. Uses the [Agent Skills](https://agentskills.io/home)
-format.
+format. Available as a plugin for Claude Code, Cursor, and OpenAI Codex.
+Includes an MCP server for tool access.
 
 ## Install
 
@@ -53,3 +54,19 @@ How do I pass custom headers to my auth endpoint?
 ```
 Why is my Y.Map growing so large?
 ```
+
+## MCP Server
+
+The plugin includes the
+[Liveblocks MCP server](https://github.com/liveblocks/liveblocks-mcp-server),
+giving agents tool access to create, modify, and delete different aspects of
+Liveblocks such as rooms, threads, comments, notifications, and more. It also
+has read access to Storage and Yjs.
+
+## Plugins
+
+This repo serves as a plugin for multiple platforms:
+
+- **Claude Code** — `.claude-plugin/`
+- **Cursor** — `.cursor-plugin/`
+- **OpenAI Codex** — `.codex-plugin/`

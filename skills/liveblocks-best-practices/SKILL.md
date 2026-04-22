@@ -32,7 +32,7 @@ metadata:
 Use this skill when implementing features using any Liveblocks packages, for
 example [`@liveblocks/react`](https://www.npmjs.com/package/@liveblocks/react)
 or [`@liveblocks/node`](https://www.npmjs.com/package/@liveblocks/node). This
-could be related to features like realtime multiplayer,commenting,
+could be related to features like realtime multiplayer, commenting,
 notifications, cursors, avatar stacks, AI, and more. This also includes
 technologies like Liveblocks Storage, Yjs, Tiptap, BlockNote, Lexical, React
 Flow, tldraw, and more.
@@ -84,7 +84,7 @@ file.
   Continuous Integration (CI) and End-to-End (E2E) testing. Connect to your app
   not online.
 - `devtools-extension`: Inspect Liveblocks Storage, Yjs, presence, events, and
-  connected users with DevTools extgensions for Chrome, Firefox, Edge.
+  connected users with DevTools extensions for Chrome, Firefox, Edge.
 - `edit-component-text-strings`: Override strings in default components, such as
   button values, tooltip text, error text, more. Also helpful for setting other
   languages.
@@ -112,9 +112,9 @@ file.
   update components only when necessary.
 - `performant-storage-with-selectors`: Prevent unnecessary storage renders by
   using `useStorage` selectors and `shallow`.
-- `prevent-unsaved-changes-being-lost` Stop losing losing unsynched or unsaved
+- `prevent-unsaved-changes-being-lost`: Stop losing unsynched or unsaved
   changes.
-- `primitive-components-parts`: Use primitives to create custom components or to
+- `primitive-component-parts`: Use primitives to create custom components or to
   merge components from your design system into Liveblocks UI.
 - `remove-liveblocks-branding`: A Liveblocks logo badge appears in the bottom
   right of the screen, this is how to remove it.
@@ -126,7 +126,7 @@ file.
   they have unread comments. These comments are sent via webhooks, and are
   triggered when a user is mentioned, or has participated in a thread.
 - `smoother-realtime-updates`: Make presence and storage run at a higher frame
-  rate, appearing more smooth. using this option, pdates can be received more
+  rate, appearing more smooth. Using this option, updates can be received more
   frequently.
 - `suspense-vs-regular-hooks`: You must read this when using any Liveblocks
   hooks. React suspense uses `ErrorBoundary` and `ClientSideSuspense`

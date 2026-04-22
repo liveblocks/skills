@@ -1,15 +1,17 @@
 {
   "name": "liveblocks",
+  "displayName": "Liveblocks",
+  "logo": "assets/logo.svg",
   "description": "Realtime collaboration for your app. Add agent skills and rules to ship rooms, presence, storage, comments, Yjs sync, and auth with concrete best practices.",
   "version": "1.0.0",
+  "license": "Apache-2.0",
   "author": {
     "name": "Liveblocks",
     "email": "support@liveblocks.io",
     "url": "https://liveblocks.io"
   },
-  "homepage": "https://github.com/liveblocks/skills",
+  "homepage": "https://liveblocks.io",
   "repository": "https://github.com/liveblocks/skills",
-  "license": "Apache-2.0",
   "keywords": [
     "liveblocks",
     "yjs",
@@ -23,5 +25,7 @@
     "tiptap",
     "lexical",
     "mcp"
-  ]
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
 }

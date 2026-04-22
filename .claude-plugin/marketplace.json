@@ -1,5 +1,5 @@
 {
-  "name": "liveblocks-skills",
+  "name": "liveblocks",
   "owner": {
     "name": "Liveblocks",
     "email": "support@liveblocks.io",
@@ -11,11 +11,11 @@
   },
   "plugins": [
     {
-      "name": "liveblocks-plugin",
+      "name": "liveblocks",
       "source": "./",
       "description": "Realtime collaboration for your app. Add agent skills and rules to ship rooms, presence, storage, comments, Yjs sync, and auth with concrete best practices.",
       "version": "1.0.0",
-      "homepage": "https://github.com/liveblocks/skills",
+      "homepage": "https://liveblocks.io",
       "repository": "https://github.com/liveblocks/skills",
       "license": "Apache-2.0",
       "keywords": [

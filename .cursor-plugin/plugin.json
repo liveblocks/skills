@@ -11,6 +11,7 @@
     "url": "https://liveblocks.io"
   },
   "homepage": "https://liveblocks.io",
+  "repository": "https://github.com/liveblocks/skills",
   "keywords": [
     "liveblocks",
     "yjs",

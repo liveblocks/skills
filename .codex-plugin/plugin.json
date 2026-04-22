@@ -1,0 +1,48 @@
+{
+  "name": "liveblocks",
+  "version": "1.0.0",
+  "description": "Realtime collaboration for your app. Add agent skills and rules to ship rooms, presence, storage, comments, Yjs sync, and auth with concrete best practices.",
+  "author": {
+    "name": "Liveblocks",
+    "email": "support@liveblocks.io",
+    "url": "https://liveblocks.io"
+  },
+  "homepage": "https://liveblocks.io",
+  "repository": "https://github.com/liveblocks/skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "liveblocks",
+    "yjs",
+    "realtime",
+    "collaboration",
+    "multiplayer",
+    "comments",
+    "notifications",
+    "agents",
+    "react",
+    "tiptap",
+    "lexical",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Liveblocks",
+    "shortDescription": "Realtime collaboration skills for Liveblocks and Yjs.",
+    "longDescription": "Add agent skills and rules to ship Liveblocks rooms, presence, storage, comments, notifications, Yjs sync, and auth with concrete best practices.",
+    "developerName": "Liveblocks",
+    "category": "developer-tools",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://liveblocks.io",
+    "privacyPolicyURL": "https://liveblocks.io/privacy",
+    "termsOfServiceURL": "https://liveblocks.io/terms",
+    "defaultPrompt": [
+      "Help me wire up Liveblocks auth.",
+      "Review my Yjs data model choices.",
+      "Find the right Liveblocks React patterns."
+    ],
+    "brandColor": "#000",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg",
+    "screenshots": []
+  }
+}

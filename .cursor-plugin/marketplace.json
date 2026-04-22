@@ -1,0 +1,44 @@
+{
+  "name": "liveblocks",
+  "owner": {
+    "name": "Liveblocks",
+    "email": "support@liveblocks.io",
+    "url": "https://liveblocks.io"
+  },
+  "metadata": {
+    "description": "Realtime collaboration for your app. Add agent skills and rules to ship rooms, presence, storage, comments, Yjs sync, and auth with concrete best practices.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "liveblocks",
+      "source": "./",
+      "description": "Realtime collaboration for your app. Add agent skills and rules to ship rooms, presence, storage, comments, Yjs sync, and auth with concrete best practices.",
+      "version": "1.0.0",
+      "homepage": "https://github.com/liveblocks/skills",
+      "repository": "https://github.com/liveblocks/skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "liveblocks",
+        "yjs",
+        "realtime",
+        "collaboration",
+        "multiplayer",
+        "comments",
+        "notifications",
+        "agents",
+        "react",
+        "tiptap",
+        "lexical",
+        "mcp"
+      ],
+      "author": {
+        "name": "Liveblocks",
+        "email": "support@liveblocks.io",
+        "url": "https://liveblocks.io"
+      },
+      "category": "developer-tools",
+      "tags": ["liveblocks", "yjs", "realtime", "collaboration", "multiplayer"]
+    }
+  ]
+}

@@ -26,5 +26,6 @@
     "lexical",
     "mcp"
   ],
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
 }

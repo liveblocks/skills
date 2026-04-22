@@ -25,6 +25,7 @@
     "mcp"
   ],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Liveblocks",
     "shortDescription": "Realtime collaboration skills for Liveblocks and Yjs.",

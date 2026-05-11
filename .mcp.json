@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "liveblocks-mcp-server": {
-      "command": "node",
-      "args": ["/full/path/to/liveblocks-mcp-server/build/index.js"],
+    "liveblocks": {
+      "command": "npx",
+      "args": ["-y", "github:liveblocks/liveblocks-mcp-server"],
       "env": {
         "LIVEBLOCKS_SECRET_KEY": "${LIVEBLOCKS_SECRET_KEY}"
       }

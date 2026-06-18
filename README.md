@@ -9,31 +9,28 @@
 
 # Liveblocks plugin
 
-A collection of skills designed to help AI coding assistants help write
-Liveblocks and Yjs code. Uses the [Agent Skills](https://agentskills.io/home)
-format. Available as a plugin for Claude Code, Cursor, and OpenAI Codex.
-Includes an MCP server for tool access.
+The Liveblocks plugin helps AI coding assistants write Liveblocks and Yjs code.
+It bundles agent skills and MCP server configuration, and is available for
+Claude Code, Cursor, and OpenAI Codex.
 
 ## Install
 
-### OpenAI Codex
-
-Install the Codex plugin:
+Install the Liveblocks plugin:
 
 ```bash
 npx plugins add liveblocks/liveblocks-plugin
 ```
 
-After installation, start a new Codex thread so the Liveblocks skills and MCP
-server are available.
+After installation, start a new thread in your AI coding tool so the Liveblocks
+skills and MCP server are available.
 
-### Other AI tools
+## Supported tools
 
-Install with the following command:
-
-```bash
-npx skills add liveblocks/liveblocks-plugin
-```
+| Tool | Status |
+|---|---|
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Supported |
+| [OpenAI Codex](https://openai.com/codex) | Supported |
+| [Cursor](https://www.cursor.com/) | Supported |
 
 ## Available skills
 

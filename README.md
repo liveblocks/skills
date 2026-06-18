@@ -86,6 +86,10 @@ This repo serves as a plugin for multiple platforms:
 - **Cursor** — `.cursor-plugin/`
 - **OpenAI Codex** — `.codex-plugin/`
 
+`liveblocks/skills` is the source of truth. The
+`liveblocks/liveblocks-plugin` repository is generated from this repo so Codex
+users can install from a plugin-named repository.
+
 ## Repository layout
 
 OpenAI Codex marketplaces expect a plugin folder referenced from

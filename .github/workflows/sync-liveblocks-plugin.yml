@@ -1,0 +1,46 @@
+name: Sync liveblocks-plugin
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out skills
+        uses: actions/checkout@v4
+
+      - name: Check out plugin repository
+        uses: actions/checkout@v4
+        with:
+          repository: liveblocks/liveblocks-plugin
+          path: liveblocks-plugin
+          token: ${{ secrets.LIVEBLOCKS_PLUGIN_SYNC_TOKEN }}
+
+      - name: Sync files
+        run: |
+          rsync -a --delete \
+            --exclude ".git/" \
+            --exclude ".github/workflows/sync-liveblocks-plugin.yml" \
+            ./ liveblocks-plugin/
+
+      - name: Commit and push changes
+        working-directory: liveblocks-plugin
+        run: |
+          git config user.name "liveblocks-bot"
+          git config user.email "hello@liveblocks.io"
+
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No changes to sync."
+            exit 0
+          fi
+
+          git add -A
+          git commit -m "Sync from liveblocks/skills"
+          git push

@@ -7,7 +7,7 @@
   </a>
 </p>
 
-# Liveblocks skills
+# Liveblocks plugin
 
 A collection of skills designed to help AI coding assistants help write
 Liveblocks and Yjs code. Uses the [Agent Skills](https://agentskills.io/home)
@@ -21,7 +21,7 @@ Includes an MCP server for tool access.
 Install the Codex plugin:
 
 ```bash
-npx plugins add liveblocks/skills
+npx plugins add liveblocks/liveblocks-plugin
 ```
 
 After installation, start a new Codex thread so the Liveblocks skills and MCP
@@ -32,7 +32,7 @@ server are available.
 Install with the following command:
 
 ```bash
-npx skills add liveblocks/skills
+npx skills add liveblocks/liveblocks-plugin
 ```
 
 ## Available skills

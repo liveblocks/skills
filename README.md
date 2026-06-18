@@ -84,8 +84,8 @@ This repo serves as a plugin for multiple platforms:
 - **OpenAI Codex** — `.codex-plugin/`
 
 `liveblocks/skills` is the source of truth. The
-`liveblocks/liveblocks-plugin` repository is generated from this repo so Codex
-users can install from a plugin-named repository.
+`liveblocks/liveblocks-plugin` repository is generated from this repo so users
+can install from a plugin-named repository.
 
 ## Repository layout
 

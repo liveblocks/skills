@@ -25,10 +25,17 @@ jobs:
 
       - name: Sync files
         run: |
-          rsync -a --delete \
-            --exclude ".git/" \
-            --exclude ".github/workflows/sync-liveblocks-plugin.yml" \
-            ./ liveblocks-plugin/
+          find liveblocks-plugin -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
+
+          rsync -a .agents liveblocks-plugin/
+          rsync -a .claude-plugin liveblocks-plugin/
+          rsync -a .codex-plugin liveblocks-plugin/
+          rsync -a .cursor-plugin liveblocks-plugin/
+          rsync -a .mcp.json liveblocks-plugin/
+          rsync -a LICENSE.md README.md liveblocks-plugin/
+          rsync -a assets liveblocks-plugin/
+          rsync -a plugins liveblocks-plugin/
+          rsync -a skills liveblocks-plugin/
 
       - name: Commit and push changes
         working-directory: liveblocks-plugin

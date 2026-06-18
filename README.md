@@ -7,88 +7,51 @@
   </a>
 </p>
 
-# Liveblocks plugin
+# Liveblocks skills
 
-The Liveblocks plugin helps AI coding assistants write Liveblocks and Yjs code.
-It bundles agent skills and MCP server configuration, and is available for
-Claude Code, Cursor, and OpenAI Codex.
+Reusable agent skills for helping AI coding assistants write Liveblocks and Yjs
+code.
+
+This repository is the source of truth for skill content. The installable
+Liveblocks plugin lives in
+[`liveblocks/liveblocks-plugin`](https://github.com/liveblocks/liveblocks-plugin)
+and vendors these skills alongside plugin metadata, assets, and MCP server
+configuration.
 
 ## Install
 
-Install the Liveblocks plugin:
+For tools that support plugins, install the Liveblocks plugin:
 
 ```bash
 npx plugins add liveblocks/liveblocks-plugin
 ```
 
-After installation, start a new thread in your AI coding tool so the Liveblocks
-skills and MCP server are available.
-
-## Supported tools
-
-| Tool | Status |
-|---|---|
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Supported |
-| [OpenAI Codex](https://openai.com/codex) | Supported |
-| [Cursor](https://www.cursor.com/) | Supported |
-
-## Available skills
-
-| Skill | Description | Source |
-|---|---|---|
-| [`liveblocks-best-practices`](./skills/liveblocks-best-practices) | Best practices for Liveblocks rooms, auth, presence, Storage, comments, notifications, text editors, React patterns, and more. | Authored here |
-| [`yjs-best-practices`](./skills/yjs-best-practices) | Guidance for Yjs data modeling, updates, performance, subdocuments, providers, and common debugging issues. | Authored here |
-
-## MCP server
-
-The plugin includes the
-[Liveblocks MCP server](https://github.com/liveblocks/liveblocks-mcp-server),
-giving agents tool access to create, modify, and delete different aspects of
-Liveblocks such as rooms, threads, comments, notifications, and more. It also
-has read access to Storage and Yjs.
-
-Set a development project secret key before starting your coding agent:
+For tools that only support standalone skills, install this repository directly:
 
 ```bash
-export LIVEBLOCKS_SECRET_KEY="sk_..."
+npx skills add liveblocks/skills
 ```
 
-Do not use a production secret key. The MCP server gives your agent direct
-access to inspect and modify data in that Liveblocks project.
+## Skills
 
-## When to use
+### `liveblocks-best-practices`
 
-After installation, skills are automatically available in your AI tool. Your
-agent will use them when it judges they are relevant.
+Best practices for using Liveblocks. Contains 40+ comprehensive references
+related to each feature of Liveblocks. Use it when building, debugging, or
+answering questions about Liveblocks.
 
-### Examples
+### `yjs-best-practices`
 
-```
-How do I handle unstable Wi-Fi connections with Liveblocks?
-```
+Best practices for using Yjs. Contains info on fixing common issues,
+structuring your data efficiently, and avoiding bugs. Use it when building,
+debugging, or answering questions about Yjs.
 
-```
-How do I pass custom headers to my auth endpoint?
-```
+## Development
 
-```
-Why is my Y.Map growing so large?
-```
+Skill content lives in `skills/`.
 
-## Plugins
+The test runner in `test-runner/` contains trigger and answer evals for the
+skills.
 
-This repo serves as a plugin for multiple platforms:
-
-- **Claude Code** — `.claude-plugin/`
-- **Cursor** — `.cursor-plugin/`
-- **OpenAI Codex** — `.codex-plugin/`
-
-`liveblocks/skills` is the source of truth. The
-`liveblocks/liveblocks-plugin` repository is generated from this repo so users
-can install from a plugin-named repository.
-
-## Repository layout
-
-OpenAI Codex marketplaces expect a plugin folder referenced from
-`.agents/plugins/marketplace.json`. To avoid duplicating files,
-`plugins/liveblocks` is a symlink to this repository root.
+The plugin repository owns plugin manifests, marketplace metadata, assets,
+README, MCP configuration, and any automation that vendors these skills.

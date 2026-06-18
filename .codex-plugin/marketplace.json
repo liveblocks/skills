@@ -8,7 +8,7 @@
       "name": "liveblocks",
       "source": {
         "source": "local",
-        "path": "./"
+        "path": "./plugins/liveblocks"
       },
       "policy": {
         "installation": "AVAILABLE",

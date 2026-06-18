@@ -9,49 +9,33 @@
 
 # Liveblocks skills
 
-Reusable agent skills for helping AI coding assistants write Liveblocks and Yjs
-code.
+Agent skills for building Liveblocks and Yjs apps.
 
-This repository is the source of truth for skill content. The installable
-Liveblocks plugin lives in
-[`liveblocks/liveblocks-plugin`](https://github.com/liveblocks/liveblocks-plugin)
-and vendors these skills alongside plugin metadata, assets, and MCP server
-configuration.
+Supports Claude Code, Codex, Cursor, and other skills-compatible coding agents.
 
-## Install
+[![skills.sh](https://skills.sh/b/liveblocks/skills)](https://skills.sh/liveblocks/skills)
 
-For tools that support plugins, install the Liveblocks plugin:
+## Install Skills
 
-```bash
-npx plugins add liveblocks/liveblocks-plugin
-```
-
-For tools that only support standalone skills, install this repository directly:
+Install the standalone skills:
 
 ```bash
 npx skills add liveblocks/skills
 ```
 
+## Install the Plugin
+
+For supported tools, install the
+[Liveblocks plugin](https://github.com/liveblocks/liveblocks-plugin). It bundles
+these skills with the Liveblocks MCP server configuration.
+
+```bash
+npx plugins add liveblocks/liveblocks-plugin
+```
+
 ## Skills
 
-### `liveblocks-best-practices`
-
-Best practices for using Liveblocks. Contains 40+ comprehensive references
-related to each feature of Liveblocks. Use it when building, debugging, or
-answering questions about Liveblocks.
-
-### `yjs-best-practices`
-
-Best practices for using Yjs. Contains info on fixing common issues,
-structuring your data efficiently, and avoiding bugs. Use it when building,
-debugging, or answering questions about Yjs.
-
-## Development
-
-Skill content lives in `skills/`.
-
-The test runner in `test-runner/` contains trigger and answer evals for the
-skills.
-
-The plugin repository owns plugin manifests, marketplace metadata, assets,
-README, MCP configuration, and any automation that vendors these skills.
+| Skill                                                             | Description                                                                                                                    |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| [`liveblocks-best-practices`](./skills/liveblocks-best-practices) | Best practices for Liveblocks rooms, auth, presence, Storage, comments, notifications, text editors, React patterns, and more. |
+| [`yjs-best-practices`](./skills/yjs-best-practices)               | Guidance for Yjs data modeling, updates, performance, subdocuments, providers, and common debugging issues.                    |
